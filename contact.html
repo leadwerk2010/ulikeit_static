@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Impressum | Radius</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/images/logo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
+                Einkaufen – Das nächste Level
+            </a>
+            <div class="menu-toggle">☰</div>
+            <nav class="nav-links">
+                <a href="posts.html">Wie funktioniert das?</a>
+                <a href="privacy.html">Datenschutz</a>
+                <a href="download.html">Herunterladen</a>
+                <a href="contact.html">Kontakt – Impressum</a>
+                <a href="about.html">Über</a>
+            </nav>
+        </div>
+    </header>
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url('assets/images/notebook.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (min-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <div class="container" style="max-width: 1000px; margin-top: 40px; margin-bottom: 60px;">
+        <h1 class="section-title">Kontakt - Impressum</h1>
+        <p style="text-align: center; margin-bottom: 40px;">Dein Name, Email Adresse (benötigt), Nachricht</p>
+
+        <div class="contact-grid">
+            <!-- Left Column: Contact Form -->
+            <form style="background: white; padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm);"
+                action="https://formspree.io/f/xjvpelaz" method="POST">
+                <div class="form-group">
+                    <label for="name">Dein Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Ihr Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Adresse</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="ihre@email.de"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" class="form-control"
+                        placeholder="Nachricht"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Senden</button>
+            </form>
+
+            <!-- Right Column: Impressum -->
+            <div style="background: rgba(255,255,255,0.8); padding: 30px; border-radius: 16px;">
+                <h2>Seitenbetreiber</h2>
+                <p>Ingenieurbüro Dietmar Schröder<br>
+                    Am Liepoldsacker 35<br>
+                    76228 Karlsruhe<br>
+                    Deutschland</p>
+                <br>
+                <p><strong>Verantwortlicher:</strong> Dietmar Schröder</p>
+                <br>
+                <p><strong>E-Mail:</strong><br>
+                    <a href="mailto:dietmar.schroeder@u-like-it.de">dietmar.schroeder@u-like-it.de</a><br>
+                    <a href="mailto:support@u-like-it.de">support@u-like-it.de</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 U-Like-It Apps. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
