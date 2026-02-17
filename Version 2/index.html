@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="U-Like-It – Lokale Deals. Echte Läden. Genau dort, wo du bist. Geo-basierte Angebote für Innenstädte.">
+  <title>U-Like-It – So kauft man jetzt ein | Shopping, das nächste Level</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Cursor: oranger Kreis mit weißem Rand + großer Schatten (versetzt) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-shadow" id="custom-cursor-shadow" aria-hidden="true"></div>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="U-Like-It Startseite">
+        <img src="images/logo.png" alt="U-Like-It" class="logo-img">
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="#how-it-works">So funktioniert's</a></li>
+          <li><a href="#usp">Warum U-Like-It</a></li>
+          <li><a href="#for-shops">Für Händler</a></li>
+          <li><a href="#for-shoppers">Für Käufer</a></li>
+          <li><a href="#pricing">Preise</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#for-shops" class="btn btn-ghost">Für Händler</a>
+        <a href="#download" class="btn btn-primary">App laden</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 1. HERO SECTION ========== -->
+    <section class="hero" id="hero">
+      <!-- Hintergrund: Weiß mit punktuellen Konzentrationen (Orange/Blau) wie AppTek Smart Application -->
+      <div class="hero-bg-wrap">
+        <div class="hero-bg-spot hero-spot-blue" aria-hidden="true"></div>
+        <div class="hero-bg-spot hero-spot-orange" aria-hidden="true"></div>
+        <div class="hero-bg-spot hero-spot-blue-2" aria-hidden="true"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <p class="hero-badge">Geo-basierte lokale Angebote</p>
+          <h1 class="hero-title">
+            Lokale Deals. <span class="hero-title-accent">Echte Läden.</span><br>Genau dort, wo du bist.
+          </h1>
+          <p class="hero-subtitle">U-Like-It verbindet Geschäfte vor Ort mit Käufern in der Nähe. Du siehst nur Angebote, die zu deinem Standort und deinen Wünschen passen – ohne Werbeflut, ohne Streuverlust.</p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary btn-lg" aria-label="Im App Store laden">App Store</a>
+            <a href="#" class="btn btn-primary btn-lg btn-accent" aria-label="Bei Google Play holen">Google Play</a>
+          </div>
+        </div>
+        <div class="hero-device-wrap reveal reveal-delay-1" id="hero-device-wrap">
+          <div class="hero-floating-badges">
+            <div class="floating-badge floating-badge-1">
+              <span class="floating-badge-icon floating-badge-icon-1" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+              <span class="floating-badge-title">100 T aktive Nutzer</span>
+            </div>
+            <div class="floating-badge floating-badge-2">
+              <span class="floating-badge-icon floating-badge-icon-2" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>
+              <span class="floating-badge-title">Umsatzsteigerung</span>
+            </div>
+            <div class="floating-badge floating-badge-4">
+              <span class="floating-badge-icon floating-badge-icon-4" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span>
+              <span class="floating-badge-title">Lokale Deals</span>
+            </div>
+          </div>
+          <div class="hero-device">
+            <div class="device-frame">
+              <div class="device-screen">
+                <img src="images/gallery/iPhone 11 Pro Max-00BuyerLogin_framed.png" alt="U-Like-It App" class="device-screen-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Karussell am unteren Ende des Heros, volle Breite, ohne weitere Infos -->
+      <div class="hero-carousel-wrap">
+        <div class="apps-carousel-track" id="apps-carousel-track">
+          <div class="apps-carousel-item"><img src="images/Anwendungen/aws_freigestellt.png" alt="AWS"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/flutter_freigestellt.png" alt="Flutter"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/golang_freigestellt.png" alt="Go"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/google_freigestellt.png" alt="Google"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/hugo_freigestellt.png" alt="Hugo"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/keycloak_freigestellt.png" alt="Keycloak"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/kubernetes_freigestellt.png" alt="Kubernetes"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/niftypm_freigestellt.png" alt="NiftyPM"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/postgresql_freigestellt.png" alt="PostgreSQL"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/aws_freigestellt.png" alt="AWS"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/flutter_freigestellt.png" alt="Flutter"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/golang_freigestellt.png" alt="Go"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/google_freigestellt.png" alt="Google"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/hugo_freigestellt.png" alt="Hugo"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/keycloak_freigestellt.png" alt="Keycloak"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/kubernetes_freigestellt.png" alt="Kubernetes"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/niftypm_freigestellt.png" alt="NiftyPM"></div>
+          <div class="apps-carousel-item"><img src="images/Anwendungen/postgresql_freigestellt.png" alt="PostgreSQL"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. HOW IT WORKS (alternating wie Screenshot) ========== -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">Ablauf</p>
+          <h2 class="section-title">So <span class="headline-accent">funktioniert's</span></h2>
+          <p class="section-subtitle">Einfach für alle: Händler erstellen Angebote, Käufer entdecken und lösen ein.</p>
+        </header>
+
+        <!-- Block 1: Visual links, Text rechts (Für Käufer) -->
+        <div class="flow-block flow-shoppers reveal">
+          <div class="flow-visual">
+            <div class="flow-visual-panel">
+              <div class="flow-visual-bg-shape" aria-hidden="true"></div>
+              <div class="flow-visual-dot flow-dot-accent" aria-hidden="true"></div>
+              <div class="flow-visual-icon flow-icon-heart" aria-hidden="true"></div>
+              <img src="images/beautiful-people.jpg" alt="Käufer entdecken lokale Angebote" class="flow-visual-img">
+              <div class="flow-overlay-card glass-card">
+                <span class="flow-card-title">Angebote in der Nähe</span>
+                <div class="flow-card-row">
+                  <span class="flow-card-label">Deals heute</span>
+                  <span class="flow-card-value flow-card-up">12</span>
+                </div>
+                <div class="flow-card-row">
+                  <span class="flow-card-label">Reichweite</span>
+                  <span class="flow-card-value">500 m</span>
+                </div>
+                <div class="flow-card-progress">
+                  <span class="flow-card-progress-label">Nutzung</span>
+                  <span class="flow-card-progress-value">63%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-content">
+            <h3 class="flow-heading">Für Käufer: <span class="headline-accent">Deals</span> entdecken & einlösen</h3>
+            <p class="flow-intro">Mit U-Like-It siehst du nur Angebote, die zu dir passen – standortbasiert und in Echtzeit. Kein Prospekt-Chaos, keine irrelevante Werbung.</p>
+            <ul class="flow-feature-list">
+              <li class="flow-feature">
+                <span class="flow-feature-icon" aria-hidden="true"></span>
+                <div>
+                  <h4 class="flow-feature-title">Übersichtliche Oberfläche</h4>
+                  <p>Präferenzen setzen, Angebote in der Nähe sehen und mit einem Tipp zum Geschäft navigieren. Alles in einer App.</p>
+                </div>
+              </li>
+              <li class="flow-feature">
+                <span class="flow-feature-icon" aria-hidden="true"></span>
+                <div>
+                  <h4 class="flow-feature-title">QR-Code einlösen</h4>
+                  <p class="flow-feature-with-badge"><span>Einfach im Laden vorzeigen</span> <span class="flow-badge-new">Neu</span></p>
+                  <p>Zeig den QR-Code im Geschäft, löse den Deal ein – ohne Kupon drucken.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Block 2: Text links, Visual rechts (Für Händler) -->
+        <div class="flow-block flow-shops reveal">
+          <div class="flow-content">
+            <h3 class="flow-heading">Für Händler: <span class="headline-accent">Angebote</span> platzieren & Reichweite steuern</h3>
+            <p class="flow-intro">Erstelle Rabatte und Aktionen in Sekunden, lege Reichweite und Laufzeit fest. Nur Menschen in deiner Nähe sehen dein Angebot – kein Streuverlust.</p>
+            <ul class="flow-feature-list">
+              <li class="flow-feature">
+                <span class="flow-feature-icon" aria-hidden="true"></span>
+                <div>
+                  <h4 class="flow-feature-title">Schnell & unkompliziert</h4>
+                  <p>Angebot in der App anlegen, Radius und Dauer wählen. Kein Design, kein Druck – alles vom Smartphone aus.</p>
+                </div>
+              </li>
+              <li class="flow-feature">
+                <span class="flow-feature-icon" aria-hidden="true"></span>
+                <div>
+                  <h4 class="flow-feature-title">Transparente Bezahlung</h4>
+                  <p class="flow-feature-with-badge"><span>Bezahlen nach Reichweite & Dauer</span> <span class="flow-badge-new">Neu</span></p>
+                  <p>Du zahlst nur für die Sichtbarkeit in deinem gewählten Umkreis – keine versteckten Kosten.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flow-visual">
+            <div class="flow-visual-panel">
+              <div class="flow-visual-bg-shape" aria-hidden="true"></div>
+              <div class="flow-visual-dot flow-dot-accent" aria-hidden="true"></div>
+              <div class="flow-visual-icon flow-icon-chart" aria-hidden="true"></div>
+              <img src="images/purchase.jpg" alt="Händler erstellen Angebote" class="flow-visual-img">
+              <div class="flow-overlay-card glass-card">
+                <span class="flow-card-title">Reichweite & Statistiken</span>
+                <div class="flow-card-row">
+                  <span class="flow-card-label">Sichtungen</span>
+                  <span class="flow-card-value flow-card-up">248</span>
+                </div>
+                <div class="flow-card-row">
+                  <span class="flow-card-label">Einlösungen</span>
+                  <span class="flow-card-value">31</span>
+                </div>
+                <div class="flow-card-progress">
+                  <span class="flow-card-progress-label">Reichweite</span>
+                  <span class="flow-card-progress-value">500 m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. USP SECTION ========== -->
+    <section class="section usp-section" id="usp">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">USP</p>
+          <h2 class="section-title">Warum U-Like-It <span class="headline-accent">anders</span> ist</h2>
+          <p class="section-subtitle">Keine Prospekte. Kein Cashback. Kein Online-Handel. Geo-basiert, lokal und für echten Laufkundenverkehr.</p>
+        </header>
+        <div class="usp-grid">
+          <article class="usp-card reveal">
+            <div class="usp-icon" aria-hidden="true"><span class="icon-placeholder icon-pin"></span></div>
+            <h3>Geo-basierte Zielgruppe</h3>
+            <p>Angebote erscheinen nur, wenn du in Reichweite bist. Händler erreichen Menschen, die wirklich vorbeikommen können.</p>
+          </article>
+          <article class="usp-card reveal">
+            <div class="usp-icon" aria-hidden="true"><span class="icon-placeholder icon-target"></span></div>
+            <h3>Kein Werbeverlust</h3>
+            <p>Bezahlt wird für Reichweite und Dauer, nicht für Klicks. Dein Budget geht an Menschen in der Nähe, die zu deinem Angebot passen.</p>
+          </article>
+          <article class="usp-card reveal">
+            <div class="usp-icon" aria-hidden="true"><span class="icon-placeholder icon-foot"></span></div>
+            <h3>Echter Laufkundenverkehr</h3>
+            <p>Wir bringen Kund:innen in deinen Laden, nicht auf eine Website. Ideal für Boutiquen, Cafés und den lokalen Einzelhandel.</p>
+          </article>
+          <article class="usp-card reveal">
+            <div class="usp-icon" aria-hidden="true"><span class="icon-placeholder icon-simple"></span></div>
+            <h3>Einfach für alle</h3>
+            <p>Angebote vom Smartphone aus erstellen und verwalten. Entdecken und einlösen mit einem Tipp. Keine komplizierte Einrichtung.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. TWO-SIDED VALUE ========== -->
+    <section class="section two-sided" id="for-shops">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">Zielgruppe</p>
+          <h2 class="section-title">Für <span class="headline-accent">beide Seiten</span> gemacht</h2>
+          <p class="section-subtitle">Händler bekommen effiziente lokale Werbung. Käufer bekommen relevante Deals ohne Ballast.</p>
+        </header>
+        <div class="two-sided-grid">
+          <article class="value-block value-retailers reveal">
+            <div class="value-visual value-img-wrap">
+              <img src="images/purchase.jpg" alt="Händler erstellen Angebote" class="value-img">
+            </div>
+            <div class="value-content">
+              <h3>Für Händler</h3>
+              <p class="value-intro">Werbung für Angebote schnell und günstig. Keine Plakate, keine teuren Medien – nur dein Smartphone und dein lokales Publikum.</p>
+              <ul class="value-list">
+                <li>Angebote in Sekunden in der App erstellen</li>
+                <li>Nur Reichweite und Dauer zahlen – transparent</li>
+                <li>Menschen erreichen, die schon in der Nähe sind</li>
+                <li>Technik-affine, lokale Kundschaft nutzen</li>
+              </ul>
+              <a href="#pricing" class="btn btn-primary">Lokale Kund:innen gewinnen</a>
+            </div>
+          </article>
+          <article class="value-block value-shoppers reveal" id="for-shoppers">
+            <div class="value-visual value-img-wrap">
+              <img src="images/beautiful-people.jpg" alt="Käufer entdecken Deals" class="value-img">
+            </div>
+            <div class="value-content">
+              <h3>Für Käufer</h3>
+              <p class="value-intro">Verpasse keine Deals in deiner Umgebung. Sieh nur, was passt – wenn du in der Nähe bist – und löse mit einem Scan ein.</p>
+              <ul class="value-list">
+                <li>Präferenzen setzen, passende Angebote in Reichweite sehen</li>
+                <li>Mit Navigation zum Geschäft</li>
+                <li>Im Laden mit einem QR-Code einlösen</li>
+                <li>Kein Spam, keine irrelevante Werbung – nur lokale Deals</li>
+              </ul>
+              <a href="#download" class="btn btn-primary btn-accent">App laden & Deals entdecken</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. WHY NOW / PROBLEM ========== -->
+    <section class="section problem-section" id="why-now">
+      <div class="problem-parallax-wrap">
+        <div class="problem-bg parallax-bg" data-parallax="0.2" style="background-image: url('images/berlin.jpg');"></div>
+      </div>
+      <div class="container">
+        <div class="problem-grid">
+          <div class="problem-content reveal">
+            <p class="headline-badge">Hintergrund</p>
+            <h2 class="section-title">Warum Innenstädte das <span class="headline-accent">jetzt</span> brauchen</h2>
+            <p>Innenstädte verlieren Laufkundschaft. Kleine Läden konkurrieren mit Online-Riesen und Werbung, die keine echten Besucher bringt. Klassische Werbung ist teuer, aufwendig zu planen und oft wirkungslos für den lokalen Handel.</p>
+            <p>U-Like-It dreht den Spieß um: <strong>Geo-basiertes, Echtzeit-Matching</strong>, damit die richtigen Angebote die richtigen Menschen am richtigen Ort erreichen. Händler bekommen echte lokale Kund:innen. Käufer bekommen relevante Deals ohne Überfluss. Gemeinsam beleben wir den lokalen Einkauf.</p>
+            <a href="#how-it-works" class="btn btn-primary">So funktioniert's</a>
+          </div>
+          <div class="problem-visual reveal">
+            <img src="images/shopping.jpg" alt="Einkaufen in der Innenstadt" class="problem-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. APP SHOWCASE ========== -->
+    <section class="section app-showcase" id="app-showcase">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">App-Showcase</p>
+          <h2 class="section-title">Die App in <span class="headline-accent">Aktion</span></h2>
+          <p class="section-subtitle">Karte, Angebote und QR-Einlösung – alles in einer klaren Oberfläche.</p>
+        </header>
+        <div class="showcase-devices">
+          <div class="showcase-phone reveal">
+            <div class="device-frame device-float">
+              <div class="device-screen">
+                <img src="images/gallery/iPhone 11 Pro Max-02BuyerShopList_framed.png" alt="Geschäftsliste" class="device-screen-img">
+              </div>
+            </div>
+            <p class="showcase-label">Geschäfte & Karte</p>
+          </div>
+          <div class="showcase-phone reveal">
+            <div class="device-frame device-float">
+              <div class="device-screen">
+                <img src="images/gallery/iPhone 11 Pro Max-05BuyerFirstOffer_framed.png" alt="Angebotsdetail" class="device-screen-img">
+              </div>
+            </div>
+            <p class="showcase-label">Angebotsdetail</p>
+          </div>
+          <div class="showcase-phone reveal">
+            <div class="device-frame device-float">
+              <div class="device-screen">
+                <img src="images/gallery/iPhone 11 Pro Max-06BuyerSettings_framed.png" alt="Einstellungen" class="device-screen-img">
+              </div>
+            </div>
+            <p class="showcase-label">Einstellungen</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. PRICING ========== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">Preise</p>
+          <h2 class="section-title">Einfaches, <span class="headline-accent">transparentes</span> Modell</h2>
+          <p class="section-subtitle">Kostenlos für Nutzer:innen. Fair für Händler. Keine versteckten Gebühren.</p>
+        </header>
+        <div class="pricing-grid">
+          <div class="pricing-card pricing-user reveal">
+            <h3>Für Nutzer:innen</h3>
+            <p class="pricing-tagline">Kostenlos. Immer.</p>
+            <ul class="pricing-features">
+              <li>Lokale Deals entdecken</li>
+              <li>Zu Geschäften navigieren</li>
+              <li>Mit QR einlösen</li>
+              <li>Kein Abo</li>
+            </ul>
+            <a href="#download" class="btn btn-primary">App laden</a>
+          </div>
+          <div class="pricing-card pricing-shop reveal">
+            <h3>Für Händler</h3>
+            <p class="pricing-tagline">Bezahlen nach Reichweite & Dauer</p>
+            <ul class="pricing-features">
+              <li>Radius wählen (z. B. 500 m)</li>
+              <li>Laufzeit wählen (z. B. 7 Tage)</li>
+              <li>Bezahlen nach Sichtbarkeit</li>
+              <li>Keine Langzeitverträge</li>
+            </ul>
+            <a href="#for-shops" class="btn btn-outline">Jetzt starten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section faq-section" id="faq">
+      <div class="faq-bg-wrap">
+        <div class="faq-bg-blur parallax-bg" data-parallax="0.2"></div>
+      </div>
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="headline-badge">Support</p>
+          <h2 class="section-title">Häufige <span class="headline-accent">Fragen</span></h2>
+          <p class="section-subtitle">Die wichtigsten Antworten zu U-Like-It – für Käufer und Händler.</p>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Was ist U-Like-It?</summary>
+            <div class="faq-answer">
+              <p>U-Like-It ist eine standortbasierte App, die lokale Geschäfte mit Kund:innen in der Nähe verbindet. Händler erstellen Angebote in der App; Käufer:innen sehen nur Deals, die zu ihrem Standort und ihren Präferenzen passen – in Echtzeit, ohne Werbeflut.</p>
+            </div>
+          </details>
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Ist die App für Nutzer:innen kostenlos?</summary>
+            <div class="faq-answer">
+              <p>Ja. Die Nutzung der App ist für alle kostenlos. Du kannst lokale Angebote entdecken, zu Geschäften navigieren und mit dem QR-Code im Laden einlösen – ohne Abo und ohne versteckte Kosten.</p>
+            </div>
+          </details>
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Wie funktioniert U-Like-It für Händler?</summary>
+            <div class="faq-answer">
+              <p>Als Händler erstellst du in der App Rabatte oder Aktionen, legst die Reichweite (z. B. 500 m) und die Laufzeit (z. B. 7 Tage) fest. Du zahlst nur für diese Reichweite und Dauer. Nur Menschen in der Nähe sehen dein Angebot – kein Streuverlust.</p>
+            </div>
+          </details>
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Wo werden die Angebote angezeigt?</summary>
+            <div class="faq-answer">
+              <p>Angebote erscheinen in der App, sobald Nutzer:innen in den von dir festgelegten Radius kommen und die passende Kategorie (z. B. Mode, Gastronomie) gewählt haben. Die Anzeige ist also standort- und präferenzbasiert.</p>
+            </div>
+          </details>
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Wie löst man ein Angebot ein?</summary>
+            <div class="faq-answer">
+              <p>In der App wird für jedes Angebot ein QR-Code angezeigt. Diesen zeigst du im Geschäft vor – der Händler scannt ihn und du erhältst den Rabatt oder die Aktion. Kein Kupon drucken, alles digital.</p>
+            </div>
+          </details>
+          <details class="faq-item glass-card reveal">
+            <summary class="faq-question">Brauche ich eine Registrierung?</summary>
+            <div class="faq-answer">
+              <p>Für die Nutzung der App (Angebote ansehen und einlösen) ist eine Anmeldung nötig. Für Händler ist eine Registrierung erforderlich, um Angebote zu erstellen und zu verwalten. Der Einstieg ist bewusst einfach gehalten.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. FINAL CTA ========== -->
+    <section class="section cta-section" id="download">
+      <div class="cta-bg-wrap">
+        <div class="cta-bg-blur parallax-bg" data-parallax="0.3"></div>
+      </div>
+      <div class="cta-bg parallax-bg" data-parallax="0.2"></div>
+      <div class="cta-floating cta-floating-1" aria-hidden="true"></div>
+      <div class="cta-floating cta-floating-2" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <p class="headline-badge reveal">Jetzt starten</p>
+        <h2 class="cta-title reveal">Bereit für mehr <span class="headline-accent">lokalen Handel</span>?</h2>
+        <p class="cta-subtitle reveal">Händler: echte Kund:innen vor Ort. Käufer: Deals genau dort, wo ihr seid.</p>
+        <div class="cta-buttons">
+          <div class="cta-block reveal">
+            <p class="cta-label">Für Händler</p>
+            <a href="#" class="btn btn-primary btn-lg">Lokale Kund:innen gewinnen</a>
+          </div>
+          <div class="cta-block reveal">
+            <p class="cta-label">Für Nutzer:innen</p>
+            <a href="#" class="btn btn-primary btn-lg btn-accent">App laden & Deals in der Nähe entdecken</a>
+          </div>
+        </div>
+        <div class="cta-app-badges reveal">
+          <a href="#" class="app-badge" aria-label="Im App Store laden">App Store</a>
+          <a href="#" class="app-badge" aria-label="Bei Google Play">Google Play</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="U-Like-It" class="logo-img logo-img-footer">
+        </a>
+        <p>Lokale Deals. Echte Läden. Genau dort, wo du bist.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#how-it-works">So funktioniert's</a>
+        <a href="#usp">Warum U-Like-It</a>
+        <a href="#for-shops">Für Händler</a>
+        <a href="#for-shoppers">Für Käufer</a>
+        <a href="#pricing">Preise</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <p class="footer-copy">&copy; U-Like-It. So kauft man jetzt ein – Shopping, das nächste Level.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
