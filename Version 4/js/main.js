@@ -3,7 +3,7 @@
  * Minimal, functional JS preserving all original behaviors
  */
 
-(function() {
+(function () {
   'use strict';
 
   /* =========================================================================
@@ -36,7 +36,7 @@
     ticking = false;
   }
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (!ticking) {
       window.requestAnimationFrame(updateHeader);
       ticking = true;
@@ -54,7 +54,7 @@
   let mobileMenuOpen = false;
 
   if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', function() {
+    mobileMenuBtn.addEventListener('click', function () {
       mobileMenuOpen = !mobileMenuOpen;
       if (mobileMenuOpen) {
         document.body.classList.add('body--no-scroll');
@@ -124,7 +124,7 @@
         mainImage.src = index === 2 ? 'images/step-3-main.png' : 'images/step-main.png';
       }
 
-      dots.forEach(function(dot, i) {
+      dots.forEach(function (dot, i) {
         dot.classList.toggle('active', i === index);
       });
 
@@ -134,18 +134,18 @@
       nextBtn.style.opacity = index === totalSlides - 1 ? '0.3' : '';
     }
 
-    prevBtn.addEventListener('click', function() {
+    prevBtn.addEventListener('click', function () {
       goToSlide(currentSlide - 1);
       resetAutoplay();
     });
 
-    nextBtn.addEventListener('click', function() {
+    nextBtn.addEventListener('click', function () {
       goToSlide(currentSlide + 1);
       resetAutoplay();
     });
 
-    dots.forEach(function(dot) {
-      dot.addEventListener('click', function() {
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
         var slideIndex = parseInt(this.getAttribute('data-slide'));
         goToSlide(slideIndex);
         resetAutoplay();
@@ -153,7 +153,7 @@
     });
 
     function autoplay() {
-      autoplayInterval = setInterval(function() {
+      autoplayInterval = setInterval(function () {
         var next = (currentSlide + 1) % totalSlides;
         goToSlide(next);
       }, 5000);
@@ -178,12 +178,12 @@
   var defaultSub = 'images/tile1-sub.png';
 
   if (solutionsMainImg && solutionsSubImg && solutionsTiles.length) {
-    solutionsTiles.forEach(function(tile) {
-      tile.addEventListener('mouseenter', function() {
+    solutionsTiles.forEach(function (tile) {
+      tile.addEventListener('mouseenter', function () {
         solutionsMainImg.src = this.getAttribute('data-main');
         solutionsSubImg.src = this.getAttribute('data-sub');
       });
-      tile.addEventListener('mouseleave', function() {
+      tile.addEventListener('mouseleave', function () {
         solutionsMainImg.src = defaultMain;
         solutionsSubImg.src = defaultSub;
       });
@@ -195,8 +195,8 @@
      ========================================================================= */
   const bagSection = document.getElementById('bag-section');
   if (bagSection) {
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           bagSection.classList.remove('animated--not-started');
           observer.unobserve(bagSection);
@@ -225,7 +225,7 @@
           parallaxSection.classList.remove('is-parallax-active');
         }
       }
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         requestAnimationFrame(updateParallaxSection);
       }, { passive: true });
       updateParallaxSection();
@@ -259,7 +259,7 @@
         }
       }
 
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         requestAnimationFrame(updateParallax);
       }, { passive: true });
       updateParallax();
@@ -313,13 +313,13 @@
   if (showDetailsBtn && hideDetailsBtn && consentGroup) {
     consentGroup.style.display = 'none';
 
-    showDetailsBtn.addEventListener('click', function() {
+    showDetailsBtn.addEventListener('click', function () {
       consentGroup.style.display = 'flex';
       showDetailsBtn.style.display = 'none';
       hideDetailsBtn.style.display = 'inline';
     });
 
-    hideDetailsBtn.addEventListener('click', function() {
+    hideDetailsBtn.addEventListener('click', function () {
       consentGroup.style.display = 'none';
       hideDetailsBtn.style.display = 'none';
       showDetailsBtn.style.display = 'inline';
@@ -327,16 +327,34 @@
   }
 
   if (acceptAllBtn) {
-    acceptAllBtn.addEventListener('click', function() {
+    acceptAllBtn.addEventListener('click', function () {
       localStorage.setItem('cookieConsent', 'all');
       hideCookieBanner();
     });
   }
 
   if (declineBtn) {
-    declineBtn.addEventListener('click', function() {
+    declineBtn.addEventListener('click', function () {
       localStorage.setItem('cookieConsent', 'necessary');
       hideCookieBanner();
+    });
+  }
+
+
+  /* =========================================================================
+     8. HERO VIDEO SEQUENCE (Image -> Video -> Image)
+     ========================================================================= */
+  const heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    // Wait 1.5 seconds (1500ms) before playing
+    setTimeout(() => {
+      heroVideo.style.opacity = '1';
+      heroVideo.play().catch(err => console.log('Video play prevented:', err));
+    }, 1500);
+
+    // When video ends, hide it again
+    heroVideo.addEventListener('ended', () => {
+      heroVideo.style.opacity = '0';
     });
   }
 
