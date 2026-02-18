@@ -138,7 +138,42 @@
         parallaxTicking = true;
       }
     });
+    window.addEventListener('resize', updateParallax);
     updateParallax();
+  }
+
+  /* ---------- Scroll Progress Bar ---------- */
+  var scrollProgress = document.getElementById('scroll-progress');
+  if (scrollProgress) {
+    function updateScrollProgress() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgress.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', function () {
+      requestAnimationFrame(updateScrollProgress);
+    });
+    updateScrollProgress();
+  }
+
+  /* ---------- Hero Scroll Effect (Scale / Parallax beim Scrollen) ---------- */
+  var heroInner = document.getElementById('hero-inner');
+  if (heroInner) {
+    function updateHeroScroll() {
+      var scrollY = window.scrollY;
+      var vh = window.innerHeight;
+      var maxScroll = vh * 0.5;
+      var t = Math.min(scrollY / maxScroll, 1);
+      var scale = 1 - t * 0.06;
+      var y = scrollY * 0.15;
+      heroInner.style.transform = 'translateY(' + y + 'px) scale(' + scale + ')';
+      heroInner.style.opacity = String(1 - t * 0.12);
+    }
+    window.addEventListener('scroll', function () {
+      requestAnimationFrame(updateHeroScroll);
+    });
+    updateHeroScroll();
   }
 
   /* ---------- Custom Cursor ---------- */

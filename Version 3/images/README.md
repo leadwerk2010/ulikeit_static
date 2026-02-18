@@ -5,6 +5,12 @@ Damit die Seite korrekt angezeigt wird, lege folgende Dateien in diesem Ordner a
 ## Logo
 - **logo.png** – U-Like-It-Logo (z. B. aus dem Hauptprojekt `assets/images/logo.png`)
 
+## Hero (Startseite)
+- **hero-app.png** – App-Screenshot für den Hero-Bereich (empfohlen: 550 × 1024 px, z. B. „U-like-it (550 x 1024 px).png“ hierher kopieren und als `hero-app.png` speichern)
+
+## Problem-Abschnitt
+- **problem-visibility.jpg** – Bild zum Text „Mode bleibt liegen. Innenstädte verlieren.“ (ruhige Innenstadt/Modeläden, Sichtbarkeit). Wird im Projekt erzeugt – ggf. aus Cursor-Assets in diesen Ordner kopieren.
+
 ## Weitere Bilder (aus `assets/images/`)
 - purchase.jpg  
 - beautiful-people.jpg  
