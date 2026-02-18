@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rette Lebensmittel vor der Verschwendung | U like it</title>
+  <meta name="description" content="Rette gute Lebensmittel vor der Verschwendung. U like it ist der weltweit größte Marktplatz für überschüssige Lebensmittel.">
+  <meta property="og:title" content="Rette Lebensmittel vor der Verschwendung | U like it">
+  <meta property="og:description" content="Rette gute Lebensmittel vor der Verschwendung mit U like it.">
+  <meta property="og:image" content="images/hero-bg.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preload" href="images/hero-bg.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="sticky-footer">
+<div class="c-layout">
+
+<!-- ========== HEADER ========== -->
+<header class="c-nav__header --header-extra-padding --header-extra-height c-nav__header--top" data-theme="light" id="site-header">
+  <div class="header-container wrapper" style="--wrapper-extra-width:180px;">
+    <div class="absolute h-[1px] bottom-0 left-[var(--wrapper-padding)] right-[var(--wrapper-padding)] bg-[var(--header-border-color)]"></div>
+    <nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="tablet-wide:px-[16px] c-nav__menu relative z-10 flex flex-row w-full items-center">
+
+      <!-- Desktop Nav Links -->
+      <div class="c-nav__content hidden desk:flex">
+        <ul class="flex flex-1 justify-start items-center list-none space-x-1">
+          <li class="c-nav__menu-item">
+            <button class="c-nav__menu-trigger text-button z-header" type="button">
+              DIE APP
+              <span class="relative h-24"><span class="absolute h-24 w-24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon relative" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+              </span></span>
+            </button>
+          </li>
+          <li class="c-nav__menu-item">
+            <button class="c-nav__menu-trigger text-button z-header" type="button">
+              UNTERNEHMENSLÖSUNGEN
+              <span class="relative h-24"><span class="absolute h-24 w-24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon relative" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+              </span></span>
+            </button>
+          </li>
+          <li class="c-nav__menu-item">
+            <button class="c-nav__menu-trigger text-button z-header" type="button">
+              ÜBER UNS
+              <span class="relative h-24"><span class="absolute h-24 w-24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon relative" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+              </span></span>
+            </button>
+          </li>
+          <li class="c-nav__menu-item">
+            <button class="c-nav__menu-trigger text-button z-header" type="button">
+              Über Lebensmittelrettung
+              <span class="relative h-24"><span class="absolute h-24 w-24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon relative" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+              </span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Logo (Center) - Ulikeit: between menu and buttons -->
+      <div class="c-nav__center h-full">
+        <a href="#" class="logo-link z-10" aria-label="Ana sayfa">
+          <img class="logo" src="images/Logo-ULI-medium-sticker.png" alt="Ulikeit" width="200" height="80">
+        </a>
+      </div>
+
+      <!-- Right: CTA Buttons + MyStore + Language -->
+      <div class="c-nav__right c-nav__actions-wrapper c-nav__actions--end-align">
+        <div class="c-nav__actions z-10">
+          <!-- Desktop actions -->
+          <div class="c-nav__actions-list hidden desk:flex">
+            <div class="c-nav__links-wrapper justify-end">
+              <div class="c-base-button-group c-base-button-group--left">
+                <button class="btn btn--primary-base btn--primary" type="button" id="header-app-btn">
+                  APP HERUNTERLADEN
+                </button>
+                <a href="https://store.toogoodtogo.com/onboarding" target="_blank" title="UNTERNEHMEN REGISTRIEREN" class="btn btn--primary-base btn--primary">
+                  UNTERNEHMEN REGISTRIEREN
+                </a>
+              </div>
+              <a href="https://store.toogoodtogo.com/login" rel="noopener noreferrer" target="_blank" title="MyStore anmelden" class="c-nav__links-item">MyStore anmelden</a>
+            </div>
+            <!-- Language switcher -->
+            <div>
+              <button class="btn btn--primary-base btn--dropdown flex items-center text-white text-h2 !p-0 !border-0" aria-label="Open language switcher menu" type="button">
+                <span class="cms-icon">
+                  <span class="nuxt-icon nuxt-icon--fill">
+                    <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M64 8C33.072 8 8 33.072 8 64C8 94.928 33.072 120 64 120C94.928 120 120 94.928 120 64C120 33.072 94.928 8 64 8ZM104.8 40H88.48C86.88 34.16 84.64 28.56 81.84 23.36C91.2 27.28 98.96 33.36 104.8 40ZM64 16.16C67.84 21.68 70.96 27.68 73.2 34.08L73.6 40H54.4L54.8 34.08C57.04 27.68 60.16 21.68 64 16.16ZM17.12 72C16.4 69.44 16 66.72 16 64C16 61.28 16.4 58.56 17.12 56H36.08C35.68 59.28 35.44 62.64 35.44 64C35.44 65.36 35.68 68.72 36.08 72H17.12ZM23.2 88H39.52C41.12 93.84 43.36 99.44 46.16 104.64C36.8 100.72 29.04 94.64 23.2 88ZM39.52 40H23.2C29.04 33.36 36.8 27.28 46.16 23.36C43.36 28.56 41.12 34.16 39.52 40ZM64 111.84C60.16 106.32 57.04 100.32 54.8 93.92L54.4 88H73.6L73.2 93.92C70.96 100.32 67.84 106.32 64 111.84ZM76.16 72H51.84C51.36 68.72 51.04 65.36 51.04 64C51.04 62.64 51.36 59.28 51.84 56H76.16C76.64 59.28 76.96 62.64 76.96 64C76.96 65.36 76.64 68.72 76.16 72ZM81.84 104.64C84.64 99.44 86.88 93.84 88.48 88H104.8C98.96 94.64 91.2 100.72 81.84 104.64ZM91.92 72C92.32 68.72 92.56 65.36 92.56 64C92.56 62.64 92.32 59.28 91.92 56H110.88C111.6 58.56 112 61.28 112 64C112 66.72 111.6 69.44 110.88 72H91.92Z" fill="currentColor"/></svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <!-- Tablet actions -->
+          <div class="c-nav__actions-list c-nav--tablet c-nav__actions-list--tablet-extra-height">
+            <div class="c-base-button-group c-base-button-group--left">
+              <button class="btn btn--primary-base btn--primary" type="button">
+                APP HERUNTERLADEN
+              </button>
+              <a href="https://store.toogoodtogo.com/onboarding" target="_blank" title="UNTERNEHMEN REGISTRIEREN" class="btn btn--primary-base btn--primary">
+                UNTERNEHMEN REGISTRIEREN
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="c-nav__mobile-drawer__button">
+        <button type="button" id="mobile-menu-btn" aria-label="Menü öffnen" class="flex items-center gap-8 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="c-main-hero" data-theme="dark">
+  <video class="c-main-hero__video c-main-hero__image" autoplay muted loop playsinline aria-hidden="true" poster="images/hero-bg.jpg">
+    <source src="images/hero-bg.mp4" type="video/mp4">
+  </video>
+  <img class="c-main-hero__image c-main-hero__image--fallback" src="images/hero-bg.jpg" alt="U like it - Rette Lebensmittel" width="1920" height="1080" fetchpriority="high">
+  <div class="c-main-hero__overlay"></div>
+  <div class="c-main-hero__wrapper wrapper">
+    <div class="c-main-hero__content">
+      <div class="m-blocks m-blocks--inner outer-block-hero">
+        <div class="wrapper wrapper--content inner-block-title">
+          <div class="c-base-title c-base-title--left c-base-title--large">
+            <h1>
+              <div class="c-portable-editor c-base-title__header" style="color:#fff;">
+                <p>RETTE GUTE LEBENSMITTEL VOR DER VERSCHWENDUNG</p>
+              </div>
+            </h1>
+          </div>
+        </div>
+        <div class="wrapper wrapper--content inner-block-button-group">
+          <div class="c-base-button-group c-base-button-group--left">
+            <button class="btn btn--primary-base btn--primary" type="button">
+              APP HERUNTERLADEN
+            </button>
+            <a href="https://store.toogoodtogo.com/onboarding" target="_blank" title="UNTERNEHMEN REGISTRIEREN" class="btn btn--text" style="color:#fff;">
+              UNTERNEHMEN REGISTRIEREN
+            </a>
+          </div>
+        </div>
+        <div class="wrapper wrapper--content inner-block-button-group">
+          <div class="app-store-section flex flex-row gap-x-8">
+            <a href="https://tgtg.onelink.me/OGjG/718n7df7" rel="noopener noreferrer" target="_blank">
+              <img class="max-h-40 max-w-[250px]" width="120" height="40" src="images/appstore-badge.png" alt="Download on the Apple App Store" loading="lazy">
+            </a>
+            <a href="https://tgtg.onelink.me/OGjG/718n7df7" rel="noopener noreferrer" target="_blank">
+              <img class="max-h-40 max-w-[250px]" width="135" height="40" src="images/playstore-badge.png" alt="Get it on Google Play" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BAG SECTION (Why U like it) ========== -->
+<section class="c-section c-bag__section" data-theme="light">
+  <div class="wrapper">
+    <div class="m-blocks m-blocks--inner">
+      <div class="wrapper wrapper--content inner-block-title">
+        <div class="c-base-title c-base-title--center c-base-title--medium">
+          <h2>
+            <div class="c-portable-editor c-base-title__header">
+              <p>U like it ist ein Social-Impact-Unternehmen mit dem Ziel, alle zu inspirieren und zu befähigen, gemeinsam Lebensmittel vor der Verschwendung zu bewahren.</p>
+            </div>
+          </h2>
+          <div class="c-base-title__description">
+            <p>Unsere App ist der weltweit größte Marktplatz für überschüssige Lebensmittel. Wir helfen unseren Nutzer*innen, gute Lebensmittel zu einem guten Preis-Leistungs-Verhältnis von lokalen Läden wie Cafés und Restaurants zu retten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bag with 4 feature blocks -->
+    <div class="c-bag__bag-parent animated--not-started" id="bag-section">
+      <div class="c-bag__title animated animated__title">
+        <div class="c-base-title c-base-title--center c-base-title--bag">
+          <h2>
+            <div class="c-portable-editor c-base-title__pre-title"><p>WARUM</p></div>
+            <div class="c-portable-editor c-base-title__header"><p>U like it</p></div>
+          </h2>
+        </div>
+      </div>
+
+      <div class="c-bag__bag animated animated__bag">
+        <img class="c-bag__img" src="./images/bag.png" alt="U like it Bag" width="1020" height="800" loading="eager" decoding="async">
+      </div>
+
+      <div class="c-bag__content">
+        <!-- Block A: top-left -->
+        <div class="animated animated__a c-bag__block c-bag__block--left">
+          <div class="cms-icon" style="font-size:2rem;">
+            <span class="nuxt-icon nuxt-icon--fill">
+              <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116.416 36.3521C115.494 33.4273 112.115 34.2081 109.792 34.3745C106.976 34.5793 104.154 34.7841 101.338 34.9825C95.7568 35.3857 90.1696 35.7889 84.5888 36.1921C83.6096 36.2625 82.6304 36.3329 81.6512 36.4033C81.344 30.9697 80.736 25.3377 79.1104 20.1345C77.7792 15.8657 75.4048 11.4753 71.1936 9.46569C68.576 8.22409 65.6576 7.96169 62.7968 8.10889C60.2752 8.23689 57.728 8.64649 55.3344 9.45289C50.4384 11.0977 46.3168 14.3553 44.2176 19.1489C41.4848 25.3697 42.1184 32.1537 42.976 38.7137C42.9952 38.8801 43.0336 39.0337 43.0976 39.1873C34.592 39.8017 26.0928 40.4161 17.5872 41.0305C16.2048 41.1329 14.8224 41.2289 13.44 41.3313C12.5312 41.3953 11.904 42.0161 11.84 42.9313C11.0592 54.0929 11.3536 65.2993 12.2496 76.4417C13.152 87.7121 14.6624 98.9249 16.2688 110.118C16.4672 111.475 16.6656 112.838 16.8576 114.202C17.0368 115.424 17.0688 116.826 17.4848 117.997C17.9648 119.315 19.136 119.942 20.4992 119.93C21.9008 119.91 23.3152 119.77 24.7168 119.693C30.3552 119.379 35.9872 119.066 41.6192 118.752C52.8832 118.131 64.1472 117.504 75.4112 116.877C86.7328 116.25 98.048 115.616 109.37 114.989C110.752 114.912 112.128 114.835 113.51 114.758C115.558 114.643 115.571 111.443 113.51 111.558C102.458 112.173 91.4048 112.787 80.352 113.402C69.3568 114.01 58.3552 114.624 47.3536 115.238C41.8304 115.546 36.3008 115.853 30.7776 116.16C28.0128 116.314 25.248 116.467 22.4896 116.621C21.8624 116.653 21.2416 116.704 20.6144 116.723C20.5568 116.723 20.5056 116.723 20.4608 116.73C20.4352 116.602 20.4032 116.467 20.3968 116.435C20.1664 115.098 20.0064 113.747 19.808 112.41C18.24 101.606 16.736 90.7905 15.744 79.9169C14.752 68.9921 14.2784 58.0033 14.7968 47.0401C14.8352 46.1697 14.8864 45.2929 14.944 44.4225C25.344 43.6737 35.744 42.9185 46.144 42.1697C57.0944 41.3825 68.0512 40.5889 79.008 39.7953C89.9072 39.0081 100.806 38.2209 111.706 37.4337C112.25 37.3953 112.826 37.4145 113.37 37.3505H113.376C113.402 37.4465 113.402 37.5617 113.408 37.6321C113.517 38.8673 113.408 40.1601 113.408 41.4017C113.395 44.0705 113.389 46.7393 113.382 49.4017C113.363 54.6881 113.344 59.9681 113.331 65.2481C113.293 75.7825 113.261 86.3169 113.229 96.8513C113.222 98.2273 113.222 99.6033 113.216 100.979C113.21 103.04 116.41 103.046 116.416 100.979C116.448 90.1377 116.486 79.2961 116.518 68.4545C116.538 63.0849 116.557 57.7217 116.57 52.3521C116.582 49.6513 116.589 46.9441 116.595 44.2433C116.602 42.8225 116.608 41.3953 116.608 39.9745C116.614 38.8097 116.774 37.4849 116.416 36.3521ZM51.0912 38.6113C49.4528 38.7265 47.8208 38.8481 46.1824 38.9633C46.1888 38.8801 46.1888 38.7969 46.1824 38.7137C45.4912 33.4401 44.7936 27.9361 46.2976 22.7393C47.584 18.3105 50.5152 14.9313 54.7392 13.0881C56.6912 12.2305 58.848 11.7057 60.96 11.4625C63.3664 11.1873 65.92 11.0913 68.2688 11.7569C72.1984 12.8769 74.4704 16.4481 75.744 20.1089C77.5616 25.3569 78.1696 31.1169 78.4704 36.6337C69.344 37.2929 60.2176 37.9521 51.0976 38.6113H51.0912Z" fill="#67D695"/><path d="M95.1616 62.5408C93.3632 59.8784 90.6624 57.7984 87.424 57.312C83.6544 56.736 80.0576 58.08 76.672 59.5968C75.9616 58.3488 75.1488 57.1584 74.2208 56.0448C71.2832 52.5184 66.8608 49.7088 62.1184 51.04C59.4944 51.7696 57.056 53.6576 55.8976 56.1472C55.52 56.9728 55.232 57.824 55.0784 58.72C55.0144 59.0784 54.9632 59.4368 54.9248 59.8016L54.9312 59.7888H54.9376V59.8144C54.9376 59.8144 54.9312 59.8144 54.9248 59.8144C54.2976 59.488 53.664 59.1872 53.0112 58.9184C50.0032 57.6768 46.5984 57.2736 43.4496 58.2336C39.6288 59.392 35.6928 62.4576 34.5792 66.4064C33.3376 70.8032 34.8352 75.7184 36.6016 79.7568C38.1568 83.3152 40.6592 86.2656 43.3344 89.0304C44.1344 89.856 44.9408 90.6752 45.7536 91.488C47.2064 92.9536 49.4656 90.688 48.0128 89.2288C45.4592 86.6496 42.784 84.1088 40.8832 81.0496C39.9744 79.584 39.2576 78.0224 38.7008 76.3904C38.0544 74.5152 37.4784 72.5568 37.3696 70.5664C37.2672 68.7232 37.4848 66.6816 38.6816 65.1904C39.712 63.8912 41.1392 62.7968 42.592 62.0224C45.0496 60.7232 47.7184 60.6208 50.3104 61.3568C51.7504 61.7664 52.6528 62.176 53.9712 62.9184C54.5536 63.2512 55.1232 63.6032 55.68 63.9808L56.5248 64.5696L57.12 65.0112C58.8288 66.368 60.3968 67.8592 61.8304 69.472L62.8544 70.6752C62.88 70.7136 62.9056 70.752 62.9376 70.784L63.1488 71.1424C63.8912 72.2752 64.6336 73.408 65.3568 74.5536C67.936 78.656 70.4256 83.008 71.3856 87.808C71.7248 89.4912 71.8144 91.232 71.7952 92.9472C71.7888 93.792 71.7504 94.7264 71.6352 95.5136C71.584 95.904 71.5008 96.288 71.3984 96.6656L71.2384 97.184C71.1616 97.4016 71.2512 97.2288 71.104 97.4848C70.528 98.4768 69.7472 99.1488 68.8448 99.5776C68.768 99.616 68.6848 99.6544 68.6016 99.68C68.4864 99.7376 68.3648 99.7824 68.2432 99.8208C66.1888 100.544 63.6608 100.173 61.6064 99.4432C60.544 99.0656 59.552 98.4576 58.592 97.8688C56.8384 96.7808 55.232 99.5456 56.9792 100.634C60.3904 102.739 64.8 104.224 68.7488 103.034C71.2192 102.97 73.7856 102.106 76.032 101.178C80.8576 99.1744 85.2864 96.3008 88.6336 92.2688C91.6864 88.6016 94.5344 84.4608 96.2624 79.9872C97.2992 77.3056 97.7216 74.1952 97.6832 71.3344C97.6448 68.2496 96.9024 65.12 95.1616 62.5472V62.5408Z" fill="#67D695"/></svg>
+            </span>
+          </div>
+          <div class="c-base-title c-base-title--left c-base-title--tiny">
+            <h3><div class="c-portable-editor c-base-title__header"><p>Genieße gutes Essen zum halben Preis oder weniger</p></div></h3>
+          </div>
+        </div>
+
+        <!-- Block C: top-right -->
+        <div class="animated animated__c c-bag__block c-bag__block--right">
+          <div class="cms-icon" style="font-size:2rem;">
+            <span class="nuxt-icon nuxt-icon--fill">
+              <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M103.968 31.9488C94.3936 25.7792 84.2176 20.5888 73.6192 16.416C68.32 14.3296 62.9184 12.512 57.4336 10.976C54.7392 10.2208 52.0192 9.45916 49.2672 8.92796C46.5152 8.39676 43.5392 8.17916 40.8384 9.20956C38.4576 10.1184 36.4864 11.8656 35.68 14.336C35.008 16.3968 35.392 18.7584 36.6592 20.512C39.3856 24.288 44.2304 25.568 48.48 26.7648C59.968 29.9904 71.264 33.8944 82.2912 38.4512C84.9984 39.5712 87.6928 40.736 90.368 41.9392L94.3488 43.7632C95.0912 44.1088 96.4224 44.5632 96.4416 45.5872C96.4544 46.368 95.2704 47.1104 94.6944 47.5712L91.0912 50.4448C88.6464 52.3904 86.208 54.3424 83.7632 56.288L80.0384 59.2576H82.304C79.104 55.7696 74.8352 52.992 70.1696 51.9744C65.2672 50.9056 60.3136 52.0064 56.5184 55.3344C52.9728 58.4384 51.36 63.52 53.2288 67.9616C55.0976 72.4032 59.4944 74.8288 64.0896 74.5536C69.0048 74.2591 73.7472 71.3152 76.0704 66.9504C76.8896 65.4144 74.816 63.5968 73.5552 65.0112C61.216 78.8928 47.6992 91.6736 35.4112 105.594L26.3488 116.371C26.4128 116.294 26.5024 116.352 26.5728 116.32L26.4384 116.307C26.4768 116.435 26.4704 116.403 26.4192 116.211C26.3744 116.333 26.4704 116.045 26.4768 115.955L26.6048 114.675L27.8976 102.01C28.2624 98.4256 28.6272 94.8416 28.9984 91.2512L27.3984 92.8512C30.8608 93.2672 34.6048 93.3312 37.9712 92.2816C41.3376 91.232 44.1024 88.8128 45.3248 85.5359C46.5472 82.2591 45.4592 78.3232 42.656 76.1024C40.0192 74.0096 36.1216 73.2736 32.9408 74.4576C29.4656 75.7504 27.3984 78.8352 26.9824 82.4448C26.7776 84.224 29.8048 84.6399 30.1248 82.8671C32.4224 70.208 34.0352 57.4464 36.032 44.736L37.9008 33.6576C38.0544 32.8064 37.6704 31.9296 36.7808 31.6864C36.0064 31.4752 34.9696 31.9488 34.8096 32.8064C32.512 45.4656 30.8992 58.2272 28.9024 70.9376L27.0336 82.016L30.176 82.4384C30.4192 80.3392 31.6736 78.5408 33.536 77.6512C35.5136 76.704 38.2016 77.0048 40.128 78.208C42.2656 79.5456 43.1488 82.112 42.3104 84.4736C41.472 86.8352 39.3728 88.4799 37.1136 89.1904C34.0096 90.1632 30.5856 90.0288 27.392 89.6448C26.4704 89.536 25.8688 90.4704 25.792 91.2448C25.0048 98.944 24.2176 106.643 23.4368 114.336C23.2896 115.795 22.9632 117.306 24.1216 118.502C24.7616 119.155 25.6512 119.539 26.5728 119.514C27.8336 119.482 28.576 118.688 29.312 117.773L33.9456 112.16C40.1856 104.813 46.816 97.8048 53.5104 90.8736L75.8144 67.2768L73.2992 65.3376C70.1952 71.1744 60.6272 74.2592 56.6464 67.6736C54.7904 64.6016 55.616 60.7936 58.08 58.2656C60.8 55.4816 64.7232 54.272 68.5504 54.912C73.024 55.6608 77.0112 58.2144 80.0448 61.5232C80.6784 62.208 81.6576 62.0415 82.3104 61.5232L96.8384 49.9328L99.2 47.4176C99.8208 46.1568 99.744 44.768 99.0848 43.5328C98.464 42.3744 97.4016 41.6704 96.2432 41.1328L92.2624 39.3024C81.536 34.4704 70.528 30.24 59.3152 26.6688L50.9312 24.1344C48.608 23.4688 46.2208 22.9376 43.9872 21.9904C42.3232 21.2864 40.4992 20.3008 39.4176 18.8864C38.9888 18.3232 38.6496 17.5744 38.5792 16.9664C38.4704 16.0448 38.6944 15.1424 39.1744 14.3552C40.3648 12.4096 42.8032 11.7056 44.96 11.6736C47.68 11.6288 50.368 12.4224 52.9792 13.0944C58.3552 14.4768 63.6608 16.128 68.8768 18.0288C79.3088 21.8368 89.3568 26.7008 98.8288 32.4992L102.355 34.7136C104.09 35.8336 105.696 33.0624 103.968 31.9488Z" fill="#67D695"/></svg>
+            </span>
+          </div>
+          <div class="c-base-title c-base-title--left c-base-title--tiny">
+            <h3><div class="c-portable-editor c-base-title__header"><p>Rette Lebensmittel in deiner Nähe</p></div></h3>
+          </div>
+        </div>
+
+        <!-- Block B: bottom-left -->
+        <div class="animated animated__b c-bag__block c-bag__block--left">
+          <div class="cms-icon" style="font-size:2rem;">
+            <span class="nuxt-icon nuxt-icon--fill">
+              <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M113.939 63.3408C113.658 53.504 110.95 43.6544 105.894 35.1872L105.53 34.5856C105.101 33.8944 104.659 33.216 104.205 32.544C99.264 25.3184 92.4928 19.4112 84.4032 15.9424C75.4816 12.1152 65.2928 11.0336 55.8848 13.6704C53.6064 14.304 51.3984 15.1744 49.28 16.224C47.4304 17.1392 49.0496 19.8976 50.8928 18.9888C56.2944 16.3136 62.3104 15.2064 68.2944 15.4496C70.0416 18.2272 70.4576 21.4912 70.528 24.736C70.5664 26.5472 70.496 28.352 70.4768 30.1632C70.4576 31.9936 70.6112 33.8688 71.4688 35.5136C73.088 38.5984 77.0624 39.6736 80.2304 38.6176C83.872 37.408 85.9072 34.3488 87.872 31.2704C88.7872 29.8432 89.7856 28.3584 91.36 27.5968C92.5184 27.04 93.9904 26.848 94.9376 27.7888L96.512 28.1664C97.6128 29.2864 98.656 30.4704 99.6416 31.712L102.08 35.0848C101.702 35.7632 101.024 36.2816 100.346 36.6272C98.912 37.3568 97.1904 37.3952 95.6224 37.5296C92.736 37.7728 89.888 38.4512 87.4816 40.1344C85.1264 41.7856 83.4112 44.1536 83.2192 47.0848C83.0464 49.7536 84.3328 52.1856 85.9136 54.2336C87.5136 56.32 89.4528 58.1696 90.784 60.4544L91.232 61.2992C91.2512 61.3184 91.2704 61.408 91.2832 61.4592L91.3152 61.408C91.3408 61.344 91.3408 61.4144 91.328 61.4528L91.2832 61.4592C91.1488 61.664 90.7968 61.8624 90.6176 62.0032L89.824 62.7328C88.8576 63.84 88.384 65.1904 88.2944 66.6432C88.1088 69.5104 89.4848 72.1984 91.1808 74.4064C92.928 76.6784 95.2832 78.9952 95.4496 82.0224C95.6544 85.6832 94.144 89.6448 96.3904 92.9792C97.4784 94.592 99.296 95.5072 101.075 95.4816C98.944 98.4448 96.48 101.152 93.6896 103.507C86.3872 109.677 77.12 112.544 67.6416 112.582C62.2976 112.608 56.9984 111.821 51.8336 110.49C46.9248 109.235 42.0736 107.558 37.5488 105.274C33.1584 103.053 29.0752 100.237 25.7792 96.5632C22.8032 93.2416 20.608 89.2416 19.2192 85.0112C18.1312 81.6896 17.504 78.2528 17.3184 74.7904L18.5856 75.1936C19.6352 75.7568 20.3712 76.4544 21.2736 77.2736C23.3152 79.136 25.44 81.0688 28.2496 81.5872C30.1952 81.952 32.1216 81.7728 34.08 81.6704L35.9488 81.6704C36.0896 81.8048 35.968 82.7712 35.968 83.0272C35.968 85.7792 36.1728 88.8448 37.952 91.0848C38.8736 92.256 40.2112 93.0176 41.6896 93.248C43.456 93.5232 45.1712 93.0816 46.9312 93.0752C49.9008 93.0624 51.6352 95.712 52.6976 98.1696C53.9968 101.178 54.7712 104.506 57.152 106.906C59.1552 108.922 62.4768 109.914 65.1648 108.794C68.6528 107.347 68.6528 103.482 68.6464 100.256C68.64 98.3104 68.544 96.3456 68.1152 94.4448C67.7504 92.7936 66.8736 91.232 66.6688 89.5488C66.336 86.8288 69.728 86.2592 71.5584 85.024C74.1632 83.2512 75.136 80.1984 74.0288 77.2224C72.8256 74.0096 70.0736 72.1344 66.8736 71.1808C65.2608 70.7008 63.5968 70.4512 61.9392 70.176L56.1472 69.088L50.2656 67.68C48.928 67.328 47.6672 66.88 46.5088 66.112C46.0864 65.8368 45.6448 65.472 45.3504 65.0944C45.0176 64.672 44.8832 64.32 44.8832 63.9424C44.896 62.8672 46.08 61.8688 46.7584 60.9984C47.8528 59.5968 48.2816 58.0416 48.0256 56.2752C47.8016 54.752 47.1168 53.3568 46.7648 51.8656C46.3936 50.3424 46.9056 49.1712 47.808 47.936L51.1744 43.8912C55.8912 38.4192 60.736 32.64 61.5168 25.1648C61.7024 23.4112 61.568 21.6384 61.184 19.9168C60.7296 17.9072 57.6448 18.7584 58.0992 20.768C59.6352 27.6032 55.3344 34.016 51.1616 38.9952L47.5904 43.1616L44.3328 47.424C43.456 49.024 43.2448 50.7072 43.6224 52.4864L44.8832 56.7808C45.0688 58.0416 44.4352 58.8416 43.6544 59.744C42.624 60.9408 41.728 62.2016 41.6832 63.8464C41.6 66.8736 44.448 68.8832 46.9376 69.9392C48.5056 70.5984 50.1696 70.976 51.8208 71.3792L57.4208 72.608L62.9184 73.568C64.4928 73.8496 66.1376 74.1568 67.5968 74.8416C69.7152 75.8272 71.8016 78.0672 71.2128 80.5184C70.944 81.6384 70.0416 82.2528 69.0688 82.7776C67.8784 83.4304 66.6368 83.9424 65.5616 84.7872C64.3136 85.7728 63.552 87.1744 63.456 88.7744C63.3536 90.5216 64.064 92.16 64.608 93.7792C65.1648 95.456 65.376 97.1712 65.4272 98.9312C65.4784 100.557 65.6448 102.406 65.28 104.006C65.0048 105.229 64.3648 105.888 63.2128 106.048C62.3488 106.163 61.184 105.869 60.288 105.331C57.8048 103.834 56.992 100.371 55.9936 97.8432C54.88 95.008 53.2416 91.9808 50.3616 90.6176C48.7936 89.8752 47.1488 89.7984 45.4464 89.9712L41.1328 89.7152C39.3024 88.6016 39.1936 85.5488 39.168 83.4432C39.1552 81.8944 39.2768 80.1984 37.9008 79.1488C36.512 78.0928 34.5216 78.4448 32.9024 78.5472L27.7376 78.1248C26.7392 77.728 25.7728 76.9984 24.9408 76.2816C23.072 74.6624 21.3504 72.7232 18.9568 71.8912C18.4064 71.6992 17.8368 71.5968 17.2608 71.584C17.3504 67.0016 18.1696 62.4192 19.6416 58.0544C22.752 48.8192 28.5312 40.6656 35.3152 33.7536L40.5504 28.8128C41.2032 28.2432 41.1392 27.1296 40.5504 26.5472C39.9104 25.9072 38.944 25.9776 38.2912 26.5472C30.5984 33.312 23.7376 41.312 19.2704 50.5792C15.84 57.6896 13.9584 65.3952 14.08 73.2032V73.408C14.1248 75.5008 14.3104 77.6 14.6432 79.6992C15.3984 84.4288 16.9856 89.0624 19.4112 93.2032C21.9776 97.5872 25.4976 101.254 29.6064 104.224C33.8752 107.302 38.7072 109.542 43.6416 111.315C48.8832 113.203 54.304 114.56 59.8336 115.277C70.3488 116.646 81.3696 115.277 90.5408 109.69C98.1888 105.037 104.179 97.9264 108.102 89.9264C112.134 81.7088 114.189 72.5056 113.933 63.3408H113.939Z" fill="#67D695"/></svg>
+            </span>
+          </div>
+          <div class="c-base-title c-base-title--left c-base-title--tiny">
+            <h3><div class="c-portable-editor c-base-title__header"><p>Reduziere Verschwendung und tu der Umwelt etwas Gutes</p></div></h3>
+          </div>
+        </div>
+
+        <!-- Block D: bottom-right -->
+        <div class="animated animated__d c-bag__block c-bag__block--right">
+          <div class="cms-icon" style="font-size:2rem;">
+            <span class="nuxt-icon nuxt-icon--fill">
+              <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M119.424 103.411C119.379 100.115 119.334 96.8129 119.29 93.5169C119.194 86.9761 119.104 80.4353 119.014 73.8945C118.918 67.3025 118.829 60.7041 118.733 54.1121L118.662 49.1649C118.643 47.6161 118.579 46.0737 117.984 44.6273C117.427 43.2833 116.563 42.1441 115.706 40.9857L112.774 37.0497C108.928 31.8657 105.19 26.5793 101.203 21.5105C99.4816 19.3217 97.3888 17.6257 94.56 17.2161C92.9408 16.9857 91.3024 16.9985 89.6704 16.9537L84.9088 16.8065C71.8336 16.4161 58.7392 15.8145 45.6576 15.7057C42.3616 15.6801 39.0656 15.7185 35.776 15.8913L31.2 16.5377C29.8048 17.0177 28.6208 17.8433 27.5072 18.7969C25.3376 20.6529 23.2896 22.6945 21.2736 24.7169C19.1552 26.8481 17.1392 29.0753 15.3216 31.4753C11.7824 36.1409 9.16481 41.5937 8.59521 47.4753C8.32641 50.2849 8.54401 53.2097 9.71521 55.8081C10.7648 58.1377 12.7744 59.8593 15.0912 60.8449C19.4624 62.7073 24.9152 62.4577 29.28 60.6913C30.4064 60.2305 31.5712 59.6033 32.6336 58.8225L34.2592 59.9681C36.4928 61.4017 39.04 62.3233 41.6704 62.6689C45.9072 63.2321 50.2144 62.0737 53.5168 59.4305L54.0608 59.7953C56.5184 61.3377 59.52 62.0737 62.2784 62.8673C65.312 63.7441 68.4736 64.4545 71.6544 64.3969C75.9488 64.3137 80.0064 62.6561 83.104 59.7889C85.3824 61.0049 87.9808 61.8817 90.4512 62.4129C93.2096 63.0017 96.1472 63.0785 98.8224 62.0865C103.29 60.4353 106.867 56.5057 107.757 51.7761C107.917 50.9313 107.52 50.0545 106.637 49.8113C105.856 49.5937 104.832 50.0737 104.672 50.9249C104.186 53.4977 102.803 55.7633 100.762 57.4017C98.6048 59.1361 95.9488 59.8209 93.2096 59.6161C91.5328 59.4881 89.8816 59.0209 88.2944 58.4769L85.3248 57.3057C85.3568 57.2673 85.3888 57.2225 85.4208 57.1777C86.7904 55.2769 87.5776 52.8705 87.1552 50.5281C86.6944 48.0001 84.32 46.3745 81.8048 46.8673C79.2256 47.3665 77.4336 49.8753 77.5616 52.4545C77.6704 54.6689 78.8032 56.5505 80.3968 57.9713L79.616 58.5601C77.216 60.2561 74.4384 61.1649 71.5008 61.1969C67.8784 61.2417 64.3584 60.1793 60.928 59.1233C59.328 58.6241 57.3824 58.0993 55.8144 57.1457C57.1968 55.4625 58.24 53.4785 58.72 51.3473C58.8928 50.5665 59.0976 49.7665 58.592 49.0625L57.2224 47.9617C56.1536 47.4497 54.9184 47.3857 53.7792 47.7057C51.328 48.3969 49.696 50.6433 49.824 53.1905C49.8944 54.6497 50.4128 55.9809 51.2128 57.1265C48.8128 58.9121 45.7408 59.8337 42.6176 59.5777C39.8976 59.3537 37.2096 58.2657 35.0144 56.6081C36.5632 54.7265 37.4208 52.4161 36.7552 49.8561C36.0896 47.2961 33.4784 45.7217 30.976 46.8993C28.2944 48.1665 27.6032 51.4177 28.672 53.9841C29.0752 54.9377 29.6384 55.8145 30.3232 56.6209C28.3456 57.9201 25.8688 58.5921 23.5648 58.8033C20.5952 59.0849 17.2928 58.8097 14.7776 57.0497C11.9744 55.0849 11.552 51.4689 11.7376 48.3009C12.1856 40.5505 16.96 33.8497 22.1312 28.4225L26.4192 24.1729C27.7504 22.9057 29.056 21.4657 30.5792 20.4289C32.2176 19.3025 34.0032 19.1745 35.936 19.0785C38.112 18.9697 40.288 18.9185 42.4704 18.9057C51.2704 18.8417 60.0832 19.2641 68.8832 19.5265L82.0544 19.9233L88.7168 20.1217C90.6624 20.1793 92.768 20.0257 94.6688 20.4801C96.32 20.8705 97.4848 22.0097 98.5408 23.2769L102.17 28.1089C104.787 31.6289 107.398 35.1425 110.016 38.6625L113.805 43.7697C114.298 44.4545 114.81 45.1777 115.098 45.9777C115.443 46.9505 115.443 47.9809 115.462 49.0049L115.648 62.2465C115.77 71.0785 115.898 79.9041 116.019 88.7297L116.205 101.978C116.237 104.205 116.307 106.445 116.301 108.678V108.832L115.142 108.858L111.802 108.902C107.405 108.96 103.002 109.024 98.6048 109.082L97.1328 109.101H97.12L96.7936 109.082H96.7232L96.768 109.03C96.8 108.838 96.7232 108.518 96.7168 108.352L96.5888 106.458C96.448 104.294 96.3072 102.131 96.1664 99.9745C95.8848 95.5969 95.5968 91.2257 95.3152 86.8481C95.0912 83.4177 94.9568 79.9361 94.0992 76.5889C93.3248 73.5425 91.872 70.6433 89.312 68.7233C86.6432 66.7201 83.136 66.3553 79.9872 67.2769C72.608 69.4401 69.3696 76.7745 68.352 83.8081C67.7568 87.9233 67.5328 92.0961 67.5712 96.2561C67.5904 98.4641 67.6928 100.666 67.8784 102.867L68.1984 106.003C68.2752 106.688 68.48 107.622 68.2048 108.288C68.0064 108.774 67.52 108.883 67.04 108.934L64.1664 108.902L57.4848 108.691L44.128 108.275L31.0912 107.866L24.416 107.654L21.2352 107.558C20.2368 107.526 19.136 107.629 18.1504 107.45C17.664 107.36 17.4528 106.97 17.3824 106.502C17.2352 105.536 17.376 104.429 17.3696 103.45L17.2416 96.8449C17.12 92.4801 16.9408 88.1153 16.8256 83.7505L16.7232 77.7921C16.7168 76.7873 16.7168 75.7825 16.7232 74.7777L16.7488 73.2801V73.1969L18.2976 73.2353L25.2224 73.5361C31.5136 73.8305 37.8048 74.1441 44.1024 74.3617C46.6752 74.4513 49.2544 74.5281 51.8272 74.5537C52.0896 80.8321 52.2688 87.1553 52.0512 93.4337L51.8144 94.4897C51.4688 94.7777 50.7136 94.6817 50.3104 94.6817L45.6064 94.6625C42.8544 94.6689 40.1088 94.7073 37.3568 94.7393C34.0224 94.7777 30.6944 94.7969 27.36 94.7649C25.3056 94.7393 25.2992 97.9393 27.36 97.9649C33.4912 98.0225 39.616 97.8753 45.7408 97.8625L50.7712 97.8817C52.3136 97.8433 53.92 97.3889 54.7008 95.9361C55.5136 94.4385 55.2704 92.4545 55.2832 90.8161C55.3024 88.9729 55.3024 87.1297 55.2832 85.2865C55.2512 81.1777 55.1424 77.0689 54.9568 72.9665C54.9184 72.1025 54.2528 71.3665 53.3568 71.3665C45.504 71.3601 37.6448 70.9249 29.7984 70.5537L19.5072 70.0801L16.3456 69.9841C15.712 69.9777 14.9504 69.9201 14.3808 70.2529C13.6896 70.6625 13.5936 71.3601 13.5744 72.0897L13.5296 74.4769C13.5104 76.0385 13.5168 77.5937 13.536 79.1553C13.5744 82.3425 13.6704 85.5233 13.7792 88.7105C13.8816 91.8913 13.9968 95.0785 14.08 98.2593C14.1184 99.8849 14.1504 101.51 14.1632 103.136C14.176 104.595 13.9328 106.291 14.3872 107.699C14.8352 109.069 15.8592 110.214 17.2992 110.534L22.0288 110.784L31.7248 111.085C38.2976 111.29 44.8704 111.494 51.4432 111.706L61.2992 112.013L65.984 112.16C67.3216 112.186 68.7232 112.045 69.824 111.226C72.3776 109.325 71.3216 105.69 71.0912 103.021C70.816 99.7761 70.72 96.5185 70.7968 93.2609C70.9248 87.8017 71.168 81.6897 73.6832 76.7169C75.6608 72.8001 79.8144 69.3057 84.4992 70.0609C89.0304 70.7905 90.7456 75.4497 91.4368 79.4177C91.872 81.9201 91.9616 84.4737 92.1216 87.0081L92.7616 96.8129L93.3888 106.458C93.4848 107.898 93.2864 109.837 94.176 111.066C95.072 112.288 96.5888 112.307 97.9648 112.288L107.827 112.154L112.755 112.09L115.142 112.058C115.942 112.045 116.838 112.128 117.613 111.878C119.206 111.379 119.52 109.818 119.501 108.358L119.43 103.411H119.424Z" fill="#67D695"/></svg>
+            </span>
+          </div>
+          <div class="c-base-title c-base-title--left c-base-title--tiny">
+            <h3><div class="c-portable-editor c-base-title__header"><p>Probiere Neues von lokalen Cafés, Bäckereien oder Restaurants</p></div></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOD CATEGORY TICKER ========== -->
+<section class="c-outer-ticker" data-theme="dark-alt">
+  <div class="c-ticker c-ticker--small" style="--c-ticker-animation-duration:21900ms;">
+    <div class="c-ticker__content">
+      <div class="c-ticker__item"><span>BACKWAREN</span></div>
+      <div class="c-ticker__item"><span>LEBENSMITTEL</span></div>
+      <div class="c-ticker__item"><span>GEMÜSE</span></div>
+      <div class="c-ticker__item"><span>GETRÄNKE</span></div>
+      <div class="c-ticker__item"><span>Sushi</span></div>
+      <div class="c-ticker__item"><span>KAFFEE</span></div>
+      <div class="c-ticker__item"><span>PIZZA</span></div>
+      <div class="c-ticker__item"><span>KUCHEN</span></div>
+      <div class="c-ticker__item"><span>BURGER</span></div>
+      <div class="c-ticker__item"><span>FRÜHSTÜCK</span></div>
+      <div class="c-ticker__item"><span>OBST</span></div>
+      <div class="c-ticker__item"><span>BUFFET</span></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="c-ticker__item"><span>BACKWAREN</span></div>
+      <div class="c-ticker__item"><span>LEBENSMITTEL</span></div>
+      <div class="c-ticker__item"><span>GEMÜSE</span></div>
+      <div class="c-ticker__item"><span>GETRÄNKE</span></div>
+      <div class="c-ticker__item"><span>Sushi</span></div>
+      <div class="c-ticker__item"><span>KAFFEE</span></div>
+      <div class="c-ticker__item"><span>PIZZA</span></div>
+      <div class="c-ticker__item"><span>KUCHEN</span></div>
+      <div class="c-ticker__item"><span>BURGER</span></div>
+      <div class="c-ticker__item"><span>FRÜHSTÜCK</span></div>
+      <div class="c-ticker__item"><span>OBST</span></div>
+      <div class="c-ticker__item"><span>BUFFET</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS (Steps) ========== -->
+<div class="c-steps-section wrapper" data-theme="light" id="steps-section">
+  <section class="relative flex-1 w-full flex flex-row justify-center" tabindex="0">
+    <div class="c-steps-section__wrapper flex-1">
+      <div class="overflow-hidden w-full">
+        <div class="c-steps-section__track flex w-full" id="steps-track">
+          <!-- Step 1 -->
+          <div class="c-steps-section__slide" role="group" aria-roledescription="slide">
+            <div class="c-steps-section__content">
+              <div class="c-base-title c-base-title--left c-base-title--medium">
+                <h2>
+                  <div class="c-portable-editor c-base-title__pre-title"><p>SO FUNKTIONIERT DIE APP</p></div>
+                  <div class="c-portable-editor c-base-title__header"><p>Schritt 1</p></div>
+                </h2>
+              </div>
+              <div class="c-portable-editor">
+                <p>Entdecke Überraschungstüten von Cafés, Lebensmittelläden, Restaurants und mehr in deiner Nähe.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="c-steps-section__slide" role="group" aria-roledescription="slide">
+            <div class="c-steps-section__content">
+              <div class="c-base-title c-base-title--left c-base-title--medium">
+                <h2>
+                  <div class="c-portable-editor c-base-title__pre-title"><p>SO FUNKTIONIERT DIE APP</p></div>
+                  <div class="c-portable-editor c-base-title__header"><p>Schritt 2</p></div>
+                </h2>
+              </div>
+              <div class="c-portable-editor">
+                <p>Bestätige deine Auswahl, reserviere dein Essen und bezahle über die App.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="c-steps-section__slide" role="group" aria-roledescription="slide">
+            <div class="c-steps-section__content">
+              <div class="c-base-title c-base-title--left c-base-title--medium">
+                <h2>
+                  <div class="c-portable-editor c-base-title__pre-title"><p>SO FUNKTIONIERT DIE APP</p></div>
+                  <div class="c-portable-editor c-base-title__header"><p>Schritt 3</p></div>
+                </h2>
+              </div>
+              <div class="c-portable-editor">
+                <p>Gehe im angegebenen Abholzeitraum zum Laden, bestätige deine Reservierung per Swipe in der App und nimm deine Überraschungstüte entgegen.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="c-steps-section__slide" role="group" aria-roledescription="slide">
+            <div class="c-steps-section__content">
+              <div class="c-base-title c-base-title--left c-base-title--medium">
+                <h2>
+                  <div class="c-portable-editor c-base-title__pre-title"><p>SO FUNKTIONIERT DIE APP</p></div>
+                  <div class="c-portable-editor c-base-title__header"><p>Schritt 4</p></div>
+                </h2>
+              </div>
+              <div class="c-portable-editor">
+                <p>Lass es dir schmecken – du hast gute Lebensmittel vor der Verschwendung bewahrt und Gutes für unseren Planeten getan!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel step counter: prev + dots + next -->
+      <div class="c-carousel-step-counter flex gap-24 items-center flex-row" id="steps-controls">
+        <button class="btn btn--icon c-steps-prev opacity-30" type="button" aria-label="Previous slide" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="h-32 w-32 rotate-180">
+            <path d="M26.75 16C24.3906 15.9385 22.0194 15.8885 19.6424 15.85C14.7262 15.7692 9.84544 15.7384 5 15.7538" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M18.75 20.5L27 15.917L18.75 11.5" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="flex flex-row gap-8">
+          <div class="c-carousel-indicator__dot active" data-slide="0"></div>
+          <div class="c-carousel-indicator__dot" data-slide="1"></div>
+          <div class="c-carousel-indicator__dot" data-slide="2"></div>
+          <div class="c-carousel-indicator__dot" data-slide="3"></div>
+        </div>
+        <button class="btn btn--icon c-steps-next" type="button" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="h-32 w-32">
+            <path d="M26.75 16C24.3906 15.9385 22.0194 15.8885 19.6424 15.85C14.7262 15.7692 9.84544 15.7384 5 15.7538" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M18.75 20.5L27 15.917L18.75 11.5" stroke="currentColor" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Images (right side) -->
+  <div class="c-steps-section__images">
+    <div class="inset-0 absolute flex flex-row justify-center desk:justify-end items-center">
+      <img id="steps-main-image" src="images/step-main.png" alt="" width="1881" height="1660" loading="lazy" class="c-base-image object-contain c-steps-section__main-image">
+      <img src="images/step-sub.png" alt="a man in an apron stands in front of a display of bread" width="858" height="859" loading="lazy" class="c-base-image object-contain c-steps-section__sub-image">
+    </div>
+  </div>
+</div>
+
+<!-- ========== PAKETE SECTION ========== -->
+<section class="c-section c-section-block c-section-block--image-left" data-theme="light">
+  <div class="wrapper">
+    <div class="c-section-block__wrapper">
+      <div class="c-section-block__content">
+        <div class="m-blocks m-blocks--inner">
+          <div class="wrapper wrapper--content inner-block-title">
+            <div class="c-base-title c-base-title--left c-base-title--medium">
+              <h2>
+                <div class="c-portable-editor c-base-title__pre-title"><p>DAS SIND</p></div>
+                <div class="c-portable-editor c-base-title__header"><p>TOO GOOD TO GO Pakete</p></div>
+              </h2>
+            </div>
+          </div>
+          <div class="wrapper wrapper--content inner-block-base-text">
+            <div class="c-portable-editor">
+              <p>Mit der U like it App kannst du dir jetzt auch Pakete gefüllt mit überschüssigen Lebensmitteln von Produzenten oder Großhändlern direkt zu dir nach Hause liefern lassen.</p>
+            </div>
+          </div>
+          <div class="wrapper wrapper--content">
+            <div class="c-base-button-group c-base-button-group--left">
+              <a href="https://www.toogoodtogo.com/de/surplus-food-parcels" class="btn btn--primary-base btn--primary" title="MEHR ERFAHREN">
+                MEHR ERFAHREN
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-section-images c-section-images--one-image c-section-images--left">
+        <div class="c-section-images__image c-section-images__image--main">
+          <img src="images/section-pakete.png" alt="U like it Pakete" width="588" height="588" loading="lazy" style="border-radius:50%;width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNER LOGO TICKER ========== -->
+<section class="c-outer-ticker" data-theme="light">
+  <div class="c-ticker c-ticker--small" style="--c-ticker-animation-duration:30000ms;">
+    <div class="c-ticker__content">
+      <div class="c-ticker__item"><span>Starbucks</span></div>
+      <div class="c-ticker__item"><span>dean&amp;david</span></div>
+      <div class="c-ticker__item"><span>BackWerk</span></div>
+      <div class="c-ticker__item"><span>Aral</span></div>
+      <div class="c-ticker__item"><span>Nordsee</span></div>
+      <div class="c-ticker__item"><span>Die Lohners</span></div>
+      <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+      <div class="c-ticker__item"><span>EDEKA</span></div>
+      <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+      <!-- Duplicate for loop -->
+      <div class="c-ticker__item"><span>Starbucks</span></div>
+      <div class="c-ticker__item"><span>dean&amp;david</span></div>
+      <div class="c-ticker__item"><span>BackWerk</span></div>
+      <div class="c-ticker__item"><span>Aral</span></div>
+      <div class="c-ticker__item"><span>Nordsee</span></div>
+      <div class="c-ticker__item"><span>Die Lohners</span></div>
+      <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+      <div class="c-ticker__item"><span>EDEKA</span></div>
+      <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARALLAX BANNER (full width) ========== -->
+<section class="c-parallax-section" aria-hidden="true">
+  <div class="c-parallax-section__bg" style="background-image:url('./images/parallax-bg.png');"></div>
+</section>
+
+<!-- ========== BUSINESS SOLUTIONS ========== -->
+<section class="c-section c-section-block" data-theme="light">
+  <div class="wrapper">
+    <div class="c-section-block__content">
+      <div class="m-blocks m-blocks--inner">
+        <div class="wrapper wrapper--content inner-block-title">
+          <div class="c-base-title c-base-title--center c-base-title--medium">
+            <h2>
+              <div class="c-portable-editor c-base-title__pre-title"><p>UNSERE LÖSUNGEN FÜR UNTERNEHMEN</p></div>
+            </h2>
+            <div class="c-base-title__description">
+              <p>Wir bieten eine Reihe von Lösungen an, die es den weltweit führenden Lebensmittelhändlern ermöglichen, Lebensmittelverschwendung zu vermeiden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="solutions-section__wrapper mt-32">
+      <!-- Shared image area (left) -->
+      <div class="c-tiles__image-container solutions-section__images">
+        <div class="c-section-images c-section-images--left">
+          <div class="c-section-images__image c-section-images__image--main">
+            <img id="solutions-main-image" src="images/tile1-main.png" alt="Überraschungstüten" loading="lazy">
+          </div>
+          <div class="c-section-images__image c-section-images__image--sub">
+            <img id="solutions-sub-image" src="images/tile1-sub.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <!-- Solution tiles (right), content only -->
+      <div class="solutions-tiles">
+        <a href="https://www.toogoodtogo.com/de/surplus-food-marketplace" class="c-tile c-tile--as-link" data-main="images/tile1-main.png" data-sub="images/tile1-sub.png">
+          <div class="flex flex-col" style="height:100%;">
+            <div class="c-tile__content">
+              <h4 class="c-tile__title">ÜBERRASCHUNGSTÜTEN</h4>
+              <p class="c-tile__description">Aus Überschüssen werden Umsätze: Einzelhändler bieten ihre unverkauften Lebensmittel in Überraschungstüten über die U like it-App an und Nutzer*innen holen sie zur vereinbarten Zeit vor Ort ab.</p>
+              <div class="c-solutions-tile__link">
+                <div class="c-solutions-tile__label">Für:</div>
+                <span class="btn btn--text btn--sm btn--no-text-transform">Lebensmitteleinzelhandel, Gastronomie</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.toogoodtogo.com/de/platform" class="c-tile c-tile--as-link" data-main="images/tile2-main.png" data-sub="images/tile2-sub.jpg">
+          <div class="flex flex-col" style="height:100%;">
+            <div class="c-tile__content">
+              <h4 class="c-tile__title">TOO GOOD TO GO PLATTFORM</h4>
+              <p class="c-tile__description">Eine modulare Software, die das Management von Mindesthaltbarkeitsdaten optimiert und automatisiert: Einzelhändler profitieren von Effizienzsteigerung, Zeitersparnis und mehr Umsatz.</p>
+              <div class="c-solutions-tile__link">
+                <div class="c-solutions-tile__label">Für:</div>
+                <span class="btn btn--text btn--sm btn--no-text-transform">Lebensmitteleinzelhandel</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.toogoodtogo.com/de/surplus-food-parcels" class="c-tile c-tile--as-link" data-main="images/tile3-main.png" data-sub="images/tile3-sub.png">
+          <div class="flex flex-col" style="height:100%;">
+            <div class="c-tile__content">
+              <h4 class="c-tile__title">TOO GOOD TO GO PAKETE</h4>
+              <p class="c-tile__description">Wir stellen Pakete mit den Überschüssen von Produktion und Großhandel zusammen, verkaufen sie über die U like it-App und liefern sie an die Nutzer*innen.</p>
+              <div class="c-solutions-tile__link">
+                <div class="c-solutions-tile__label">Für:</div>
+                <span class="btn btn--text btn--sm btn--no-text-transform">Produktion, Grosshandel</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.toogoodtogo.com/de/look-smell-taste" class="c-tile c-tile--as-link" data-main="images/tile4-main.jpg" data-sub="images/tile4-sub.png">
+          <div class="flex flex-col" style="height:100%;">
+            <div class="c-tile__content">
+              <h4 class="c-tile__title">INITIATIVE ZUR DATUMSKENNZEICHNUNG</h4>
+              <p class="c-tile__description">Werde Teil einer Koalition führender Marken, indem du unser Etikett "Oft länger gut" auf deine Produkte mit Mindesthaltbarkeitsdatum druckst.</p>
+              <div class="c-solutions-tile__link">
+                <div class="c-solutions-tile__label">Für:</div>
+                <span class="btn btn--text btn--sm btn--no-text-transform">FMCG, Grosshandel und einzelhandel</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PARTNER SECTION (SCHLIESSE DICH) ========== -->
+<section class="c-section c-section-block c-section-block--no-image c-section-block--align-center outer-block-section" data-theme="light">
+  <div class="c-section-block__wrapper wrapper">
+    <div class="c-section-block__content c-section-block__content--inner content-container">
+      <div class="m-blocks m-blocks--inner">
+        <div class="wrapper wrapper--content inner-block-title">
+          <div class="c-base-title c-base-title--center c-base-title--small">
+            <h3><div class="c-portable-editor c-base-title__header"><p>SCHLIESSE DICH <span>180,000</span> UNTERNEHMEN AN, DIE BEREITS MIT UNS LEBENSMITTEL RETTEN</p></div></h3>
+          </div>
+        </div>
+
+        <!-- Partner ticker (reversed for mobile) -->
+        <div class="inner-block-ticker">
+          <div class="c-ticker c-ticker--large c-ticker--reversed c-ticker--mobile" style="--c-ticker-animation-duration:35000ms;">
+            <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+              <div class="c-ticker__item"><span>Starbucks</span></div>
+              <div class="c-ticker__item"><span>dean&amp;david</span></div>
+              <div class="c-ticker__item"><span>BackWerk</span></div>
+              <div class="c-ticker__item"><span>Aral</span></div>
+              <div class="c-ticker__item"><span>Nordsee</span></div>
+              <div class="c-ticker__item"><span>Die Lohners</span></div>
+              <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+              <div class="c-ticker__item"><span>EDEKA</span></div>
+              <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+            </div>
+            <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+              <div class="c-ticker__item"><span>Starbucks</span></div>
+              <div class="c-ticker__item"><span>dean&amp;david</span></div>
+              <div class="c-ticker__item"><span>BackWerk</span></div>
+              <div class="c-ticker__item"><span>Aral</span></div>
+              <div class="c-ticker__item"><span>Nordsee</span></div>
+              <div class="c-ticker__item"><span>Die Lohners</span></div>
+              <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+              <div class="c-ticker__item"><span>EDEKA</span></div>
+              <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+            </div>
+          </div>
+          <!-- Partner ticker (desktop) -->
+          <div class="c-ticker c-ticker--large" style="--c-ticker-animation-duration:35000ms;">
+            <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+              <div class="c-ticker__item"><span>Starbucks</span></div>
+              <div class="c-ticker__item"><span>dean&amp;david</span></div>
+              <div class="c-ticker__item"><span>BackWerk</span></div>
+              <div class="c-ticker__item"><span>Aral</span></div>
+              <div class="c-ticker__item"><span>Nordsee</span></div>
+              <div class="c-ticker__item"><span>Die Lohners</span></div>
+              <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+              <div class="c-ticker__item"><span>EDEKA</span></div>
+              <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+            </div>
+            <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+              <div class="c-ticker__item"><span>Starbucks</span></div>
+              <div class="c-ticker__item"><span>dean&amp;david</span></div>
+              <div class="c-ticker__item"><span>BackWerk</span></div>
+              <div class="c-ticker__item"><span>Aral</span></div>
+              <div class="c-ticker__item"><span>Nordsee</span></div>
+              <div class="c-ticker__item"><span>Die Lohners</span></div>
+              <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+              <div class="c-ticker__item"><span>EDEKA</span></div>
+              <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="c-base-button-group c-base-button-group--center">
+          <div class="inner-block-button-group">
+            <button class="btn btn--primary-base btn--primary" type="button">
+              APP HERUNTERLADEN
+            </button>
+          </div>
+          <a href="https://store.toogoodtogo.com/onboarding" target="_blank" title="UNTERNEHMEN REGISTRIEREN" class="inner-block-button-group">
+            <span class="btn btn--primary-base btn--primary">UNTERNEHMEN REGISTRIEREN</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- .c-layout -->
+
+<!-- ========== FOOTER ========== -->
+<footer class="c-footer min-h-[64px] bg-primary" data-theme="dark">
+  <div class="c-footer__main c-footer__main--fullwidth bg-primary-30 desk:px-32" style="background-image:url('./images/parallax-bg.png');background-size:cover;background-position:center;">
+    <div class="wrapper flex flex-col py-32 gap-32 tablet-wide:flex-row justify-between text-white items-center">
+
+      <!-- Footer Logo (left, hidden on mobile) -->
+      <div class="logo-container hidden tablet-wide:flex">
+        <a href="https://www.toogoodtogo.com/de">
+          <img width="80" height="64" loading="lazy" src="images/logo.svg" alt="U like it Logo">
+        </a>
+      </div>
+
+      <!-- Center column: Links + Social + App Store -->
+      <div class="flex flex-col w-fit items-center gap-32 tablet-wide:gap-16">
+        <!-- Footer Links (single row, uppercase) -->
+        <div class="flex flex-row flex-wrap max-w-full items-center justify-center gap-32 text-h6 uppercase">
+          <a href="https://www.toogoodtogo.com/de/careers" title="Karriere"><p class="c-custom-link__text">Karriere</p></a>
+          <a href="https://www.toogoodtogo.com/de/press" title="Presse"><p class="c-custom-link__text">Presse</p></a>
+          <a href="https://www.toogoodtogo.com/de/support" title="Hilfe"><p class="c-custom-link__text">Hilfe</p></a>
+          <a href="https://store.toogoodtogo.com/login" rel="noopener noreferrer" target="_blank" title="Mystore"><p class="c-custom-link__text">Mystore</p></a>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="flex flex-row flex-wrap items-center justify-center gap-x-24 text-32 text-white">
+          <a href="https://www.linkedin.com/company/too-good-to-go" rel="noopener" target="_blank" aria-label="Visit U like it's LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M116 3H12C7.03 3 3 7.03 3 12v104c0 4.97 4.03 9 9 9h104c4.97 0 9-4.03 9-9V12c0-4.97-4.03-9-9-9zM40.35 109H21.6V50.2h18.75v58.8zM30.97 41.5c-6.02 0-10.9-4.88-10.9-10.9s4.88-10.9 10.9-10.9 10.9 4.88 10.9 10.9-4.88 10.9-10.9 10.9zM109 109H90.25V80.3c0-6.85-.12-15.65-9.55-15.65-9.56 0-11.02 7.47-11.02 15.17V109H50.93V50.2h18v8.03h.25c2.5-4.75 8.63-9.75 17.75-9.75 19 0 22.5 12.5 22.5 28.77V109h-.43z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/toogoodtogo.de" rel="noopener" target="_blank" aria-label="Visit U like it's Instagram">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M64 11.65c17.1 0 19.12.07 25.88.37 6.26.29 9.66 1.33 11.92 2.21 3 1.16 5.13 2.55 7.38 4.8 2.24 2.24 3.63 4.38 4.8 7.38.88 2.26 1.92 5.66 2.21 11.92.3 6.76.37 8.79.37 25.88s-.07 19.12-.37 25.88c-.29 6.26-1.33 9.66-2.21 11.92-1.16 3-2.55 5.13-4.8 7.38-2.24 2.24-4.38 3.63-7.38 4.8-2.26.88-5.66 1.92-11.92 2.21-6.76.3-8.79.37-25.88.37s-19.12-.07-25.88-.37c-6.26-.29-9.66-1.33-11.92-2.21-3-1.16-5.13-2.55-7.38-4.8-2.24-2.24-3.63-4.38-4.8-7.38-.88-2.26-1.92-5.66-2.21-11.92-.3-6.76-.37-8.79-.37-25.88s.07-19.12.37-25.88c.29-6.26 1.33-9.66 2.21-11.92 1.16-3 2.55-5.13 4.8-7.38 2.24-2.24 4.38-3.63 7.38-4.8 2.26-.88 5.66-1.92 11.92-2.21 6.76-.3 8.79-.37 25.88-.37M64 0C46.62 0 44.44.08 37.6.38 30.78.69 26.08 1.78 21.96 3.38c-4.26 1.65-7.87 3.86-11.47 7.47C6.88 14.45 4.67 18.06 3.02 22.32 1.42 26.44.33 31.14.02 37.96-.28 44.8-.36 46.98-.36 64.36s.08 19.56.38 26.4c.31 6.82 1.4 11.52 3 15.64 1.65 4.26 3.86 7.87 7.47 11.47 3.6 3.6 7.21 5.82 11.47 7.47 4.12 1.6 8.82 2.69 15.64 3 6.84.3 9.02.38 26.4.38s19.56-.08 26.4-.38c6.82-.31 11.52-1.4 15.64-3 4.26-1.65 7.87-3.86 11.47-7.47 3.6-3.6 5.82-7.21 7.47-11.47 1.6-4.12 2.69-8.82 3-15.64.3-6.84.38-9.02.38-26.4s-.08-19.56-.38-26.4c-.31-6.82-1.4-11.52-3-15.64-1.65-4.26-3.86-7.87-7.47-11.47C113.92 6.88 110.31 4.67 106.05 3.02 101.93 1.42 97.23.33 90.41.02 83.56-.28 81.38-.36 64-.36V0z"/><path d="M64 31.14c-18.14 0-32.86 14.71-32.86 32.86S45.86 96.86 64 96.86 96.86 82.14 96.86 64 82.14 31.14 64 31.14zm0 54.17c-11.77 0-21.31-9.54-21.31-21.31S52.23 42.69 64 42.69 85.31 52.23 85.31 64 75.77 85.31 64 85.31z"/><circle cx="97.51" cy="30.49" r="7.68"/></svg>
+          </a>
+          <a href="https://www.facebook.com/toogoodtogoGermany/" rel="noopener" target="_blank" aria-label="Visit U like it's Facebook">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M116 3H12C7.03 3 3 7.03 3 12v104c0 4.97 4.03 9 9 9h52V79H49V61h15V48c0-15.2 9.3-23.5 22.86-23.5 6.5 0 12.08.48 13.71.7v15.88h-9.41c-7.38 0-8.81 3.51-8.81 8.66V61h17.63l-2.3 18H82.35v45H116c4.97 0 9-4.03 9-9V12c0-4.97-4.03-9-9-9z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@toogoodtogo.dach" rel="noopener" target="_blank" aria-label="Visit U like it's TikTok">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M97.55 28.31A28.36 28.36 0 0185.1 10h-21.7v75.16a17.16 17.16 0 01-17.14 14.62A17.16 17.16 0 0129.12 82.6a17.16 17.16 0 0117.14-17.18c1.78 0 3.49.28 5.1.78V44.16a39.2 39.2 0 00-5.1-.34C24.5 43.82 7 61.32 7 82.6S24.5 121.37 46.26 121.37s39.26-17.5 39.26-38.77V49.87A50.14 50.14 0 00121 59.8V38.21a28.43 28.43 0 01-23.45-9.9z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/c/TooGoodToGoINT" rel="noopener" target="_blank" aria-label="Visit U like it's YouTube">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M125.33 33.87a16.07 16.07 0 00-11.3-11.37C104.16 19.6 64 19.6 64 19.6s-40.16 0-50.03 2.9A16.07 16.07 0 002.67 33.87C-.23 43.8-.23 64.47-.23 64.47s0 20.67 2.9 30.6a16.07 16.07 0 0011.3 11.37c9.87 2.9 50.03 2.9 50.03 2.9s40.16 0 50.03-2.9a16.07 16.07 0 0011.3-11.37c2.9-9.93 2.9-30.6 2.9-30.6s0-20.67-2.9-30.6zM51.2 84.23V44.7L84.27 64.47 51.2 84.23z"/></svg>
+          </a>
+          <a href="https://twitter.com/toogoodtogo" rel="noopener" target="_blank" aria-label="Visit U like it's Twitter">
+            <svg width="24" height="24" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M73.69 55.92L114.73 8H105.2L69.41 49.72L40.59 8H6l43.06 62.67L6 120h9.53l37.65-43.77L83.41 120H118L73.69 55.92zm-13.33 15.5l-4.36-6.24L19.78 15.3h14.94l28 40.06 4.36 6.24 36.4 52.07H88.54L60.36 71.42z"/></svg>
+          </a>
+        </div>
+
+        <!-- App Store Badges -->
+        <div class="app-store-section flex flex-row gap-x-8">
+          <a href="https://tgtg.onelink.me/OGjG/718n7df7" rel="noopener noreferrer" target="_blank">
+            <img class="max-h-40 max-w-[250px]" width="120" height="40" src="images/appstore-badge.png" alt="Download on the Apple App Store" loading="lazy">
+          </a>
+          <a href="https://tgtg.onelink.me/OGjG/718n7df7" rel="noopener noreferrer" target="_blank">
+            <img class="max-h-40 max-w-[250px]" width="135" height="40" src="images/playstore-badge.png" alt="Get it on Google Play" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <!-- B-Corp Badge (right) -->
+      <div class="logo-container flex justify-end">
+        <a href="https://www.toogoodtogo.com/de/about-us/b-corp">
+          <img src="images/b-corp.svg" alt="B Corporation" width="80" height="80" loading="lazy">
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="c-footer__back w-full" style="position:fixed;bottom:0;z-index:1;"></div>
+</footer>
+
+</div><!-- .sticky-footer -->
+
+<!-- ========== COOKIE CONSENT BANNER ========== -->
+<div id="coiOverlay" role="banner" style="display:none;" aria-hidden="true">
+  <div role="dialog" tabindex="-1" aria-modal="true" id="coi-banner-wrapper" class="coi-banner__wrapper" aria-describedby="coiBannerHeadline" aria-labelledby="coi-banner-wrapper_label" lang="de" dir="ltr">
+    <div id="coiPage-1" class="coi-banner__page">
+      <div class="coi-banner__summary">
+        <button id="coi-expand" disabled="disabled" tabindex="-1"><div></div></button>
+        <div class="coi-banner__text">
+          <h2 class="coi-banner__headline" id="coiBannerHeadline">Diese Website verwendet Cookies</h2>
+          <div class="coi-banner__maintext" id="coi-banner-wrapper_label">
+            <p>Wir verwenden Cookies, um Daten über dich als Nutzer*in unserer Website zu sammeln. Wir verwenden diese Daten, um: </p>
+            <ul style="list-style: square; list-style-position: inside; margin: 15px 0 0;">
+              <li>Essenziell, damit die Website ordnungsgemäß funktioniert (z. B. um deine Cookie-Auswahl zu speichern oder die Sicherheit zu gewährleisten). Diese Cookies können nicht deaktiviert werden.</li>
+              <li>dir eine bessere Benutzererfahrung auf unserer Website zu ermöglichen (funktional)</li>
+              <li>zu verstehen, wie Besucher*innen unsere Website nutzen (statistisch)</li>
+              <li>dir unsere Werbeaktionen über Werbepartner zu zeigen und die Performance von Kampagnen zu messen (Marketing).</li>
+            </ul>
+            <p>Klicke auf <strong>Alle akzeptieren</strong>, um uns deine Zustimmung zur Verwendung von Cookies für all diese Zwecke zu geben. Du kannst auch die Kontrollkästchen verwenden, um nur bestimmten Zwecken zuzustimmen. Wähle die Zwecke aus und <strong>speichere die Einstellungen</strong>.</p>
+            <p>Du kannst deine Zustimmung jederzeit widerrufen oder ändern, indem du auf das Cookie-Symbol in der unteren linken Ecke des Bildschirms klickst. Mehr Infos darüber, wie wir Cookies und andere Technologien verwenden, um persönliche Daten zu sammeln, findest du hier: <a href="https://www.toogoodtogo.com/de/privacy">Datenschutzbestimmungen</a> und <a href="https://www.toogoodtogo.com/de/cookie-policy">Cookie-Richtlinie</a>.</p>
+            <a class="coi-banner__cookie-privacy-policy coi-banner__policy" href="https://www.toogoodtogo.com/de/cookie-policy" target="_blank" rel="noopener noreferrer">Über cookies</a>
+          </div>
+          <div class="coi-toggle-group">
+            <button tabindex="0" id="show_details" aria-expanded="false" aria-controls="coiConsentBannerCategoriesWrapper" aria-label="Details anzeigen">Details anzeigen</button>
+            <button tabindex="-1" id="hide_details" aria-expanded="true" aria-controls="coiConsentBannerCategoriesWrapper" aria-label="Details ausblenden" style="display:none;">Details ausblenden</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie category toggles -->
+      <div class="coi-banner-consent-group">
+        <div class="coi-banner-consent-field">
+          <div class="coi-consent-banner__switch-container" id="switch-cookie_cat_necessary">
+            <label for="cookie_cat_necessary" class="coi-checkboxes">
+              <input class="coi__checkbox" tabindex="-1" name="cookie_cat_necessary" id="cookie_cat_necessary" type="checkbox" disabled="disabled" checked="checked">
+              <span class="checkbox-toggle"></span>
+              Unbedingt erforderlich
+            </label>
+          </div>
+        </div>
+        <div class="coi-banner-consent-field">
+          <div class="coi-consent-banner__switch-container" id="switch-cookie_cat_functional">
+            <label for="cookie_cat_functional" class="coi-checkboxes">
+              <input class="coi__checkbox" tabindex="0" name="cookie_cat_functional" id="cookie_cat_functional" type="checkbox" checked="checked">
+              <span class="checkbox-toggle"></span>
+              Funktional
+            </label>
+          </div>
+        </div>
+        <div class="coi-banner-consent-field">
+          <div class="coi-consent-banner__switch-container" id="switch-cookie_cat_statistic">
+            <label for="cookie_cat_statistic" class="coi-checkboxes">
+              <input class="coi__checkbox" tabindex="0" name="cookie_cat_statistic" id="cookie_cat_statistic" type="checkbox" checked="checked">
+              <span class="checkbox-toggle"></span>
+              Statistik
+            </label>
+          </div>
+        </div>
+        <div class="coi-banner-consent-field">
+          <div class="coi-consent-banner__switch-container" id="switch-cookie_cat_marketing">
+            <label for="cookie_cat_marketing" class="coi-checkboxes">
+              <input class="coi__checkbox" tabindex="0" name="cookie_cat_marketing" id="cookie_cat_marketing" type="checkbox" checked="checked">
+              <span class="checkbox-toggle"></span>
+              Werbung
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="coi-banner__page-footer" role="navigation" aria-label="menu">
+        <div class="coi-button-group">
+          <button tabindex="0" id="declineButton" class="coi-banner__decline" aria-label="Nur notwendige Cookies">Nur notwendige Cookies</button>
+          <button tabindex="0" class="coi-banner__accept" id="acceptAllButton" aria-label="Alle akzeptieren">Alle akzeptieren</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
