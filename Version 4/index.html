@@ -162,10 +162,10 @@
       <!-- ========== HERO SECTION ========== -->
       <section class="c-main-hero" data-theme="dark">
         <video id="hero-video" class="c-main-hero__video c-main-hero__image" muted playsinline aria-hidden="true"
-          poster="images/hero-bg.png" style="opacity:0; transition: opacity 1s ease;">
+          poster="images/hero-bg.jpg" style="opacity:0; transition: opacity 1s ease;">
           <source src="images/hero-bg.mp4" type="video/mp4">
         </video>
-        <img class="c-main-hero__image c-main-hero__image--fallback" src="images/hero-bg.png"
+        <img class="c-main-hero__image c-main-hero__image--fallback" src="images/hero-bg.jpg"
           alt="U like it - Rette Lebensmittel" width="1920" height="1080" fetchpriority="high">
         <div class="c-main-hero__overlay"></div>
         <div class="c-main-hero__wrapper wrapper">
@@ -175,7 +175,7 @@
                 <div class="c-base-title c-base-title--left c-base-title--large">
                   <h1>
                     <div class="c-portable-editor c-base-title__header" style="color:#fff;">
-                      <p>RETTE GUTE LEBENSMITTEL VOR DER VERSCHWENDUNG</p>
+                      <p id="hero-text-carousel">RETTE DEINE INNENSTADT DEAL FÜR DEAL</p>
                     </div>
                   </h1>
                 </div>
@@ -518,7 +518,9 @@
                 </div>
                 <div class="wrapper wrapper--content inner-block-base-text">
                   <div class="c-portable-editor">
-                    <p>Mit der U like it App kannst du dir jetzt auch Pakete gefüllt mit überschüssigen Lebensmitteln
+                    <p style="width: 85%; text-align: left;">Mit der U like it App kannst du dir jetzt auch Pakete
+                      gefüllt mit
+                      überschüssigen Lebensmitteln
                       von Produzenten oder Großhändlern direkt zu dir nach Hause liefern lassen.</p>
                   </div>
                 </div>
@@ -576,7 +578,7 @@
 
       <!-- ========== BUSINESS SOLUTIONS ========== -->
       <section class="c-section c-section-block" data-theme="light">
-        <div class="wrapper">
+        <div class="wrapper" style="width: 70%; margin: 0 auto;">
           <div class="c-section-block__content">
             <div class="m-blocks m-blocks--inner">
               <div class="wrapper wrapper--content inner-block-title">
@@ -608,7 +610,7 @@
               </div>
             </div>
             <!-- Solution tiles (right), content only -->
-            <div class="solutions-tiles">
+            <div class="solutions-tiles" style="max-width: 52%;">
               <a href="https://www.toogoodtogo.com/de/surplus-food-marketplace" class="c-tile c-tile--as-link"
                 data-main="images/tile1-main.png" data-sub="images/tile1-sub.png">
                 <div class="flex flex-col" style="height:100%;">
@@ -672,149 +674,152 @@
             </div>
           </div>
         </div>
-      </section>
+        </a>
+    </div>
+  </div>
+  </div>
+  </section>
 
-      <!-- ========== PARTNER SECTION (SCHLIESSE DICH) ========== -->
-      <section
-        class="c-section c-section-block c-section-block--no-image c-section-block--align-center outer-block-section"
-        data-theme="light">
-        <div class="c-section-block__wrapper wrapper">
-          <div class="c-section-block__content c-section-block__content--inner content-container">
-            <div class="m-blocks m-blocks--inner">
-              <div class="wrapper wrapper--content inner-block-title">
-                <div class="c-base-title c-base-title--center c-base-title--small">
-                  <h3>
-                    <div class="c-portable-editor c-base-title__header">
-                      <p>SCHLIESSE DICH <span>180,000</span> UNTERNEHMEN AN, DIE BEREITS MIT UNS LEBENSMITTEL RETTEN</p>
-                    </div>
-                  </h3>
+  <!-- ========== PARTNER SECTION (SCHLIESSE DICH) ========== -->
+  <section class="c-section c-section-block c-section-block--no-image c-section-block--align-center outer-block-section"
+    data-theme="light">
+    <div class="c-section-block__wrapper wrapper">
+      <div class="c-section-block__content c-section-block__content--inner content-container">
+        <div class="m-blocks m-blocks--inner">
+          <div class="wrapper wrapper--content inner-block-title">
+            <div class="c-base-title c-base-title--center c-base-title--small">
+              <h3>
+                <div class="c-portable-editor c-base-title__header">
+                  <p>SCHLIESSE DICH <span>180,000</span> UNTERNEHMEN AN, DIE BEREITS MIT UNS LEBENSMITTEL RETTEN</p>
                 </div>
+              </h3>
+            </div>
+          </div>
+
+          <!-- Partner ticker (reversed for mobile) -->
+          <div class="inner-block-ticker">
+            <div class="c-ticker c-ticker--large c-ticker--reversed c-ticker--mobile"
+              style="--c-ticker-animation-duration:35000ms;">
+              <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
               </div>
-
-              <!-- Partner ticker (reversed for mobile) -->
-              <div class="inner-block-ticker">
-                <div class="c-ticker c-ticker--large c-ticker--reversed c-ticker--mobile"
-                  style="--c-ticker-animation-duration:35000ms;">
-                  <div class="c-ticker__content flex flex-row flex-nowrap items-center">
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                  </div>
-                </div>
-                <!-- Partner ticker (desktop) -->
-                <div class="c-ticker c-ticker--large" style="--c-ticker-animation-duration:150000ms;">
-                  <div class="c-ticker__content flex flex-row flex-nowrap items-center">
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                    <div class="c-ticker__item"><span>Starbucks</span></div>
-                    <div class="c-ticker__item"><span>dean&amp;david</span></div>
-                    <div class="c-ticker__item"><span>BackWerk</span></div>
-                    <div class="c-ticker__item"><span>Aral</span></div>
-                    <div class="c-ticker__item"><span>Nordsee</span></div>
-                    <div class="c-ticker__item"><span>Die Lohners</span></div>
-                    <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
-                    <div class="c-ticker__item"><span>EDEKA</span></div>
-                    <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- CTA buttons -->
-              <div class="c-base-button-group c-base-button-group--center">
-                <div class="inner-block-button-group">
-                  <button class="btn btn--primary-base btn--primary" type="button">
-                    APP HERUNTERLADEN
-                  </button>
-                </div>
-                <a href="https://store.toogoodtogo.com/onboarding" rel="noopener noreferrer" target="_blank"
-                  title="UNTERNEHMEN REGISTRIEREN" class="inner-block-button-group">
-                  <span class="btn btn--primary-base btn--primary">UNTERNEHMEN REGISTRIEREN</span>
-                </a>
+            </div>
+            <!-- Partner ticker (desktop) -->
+            <div class="c-ticker c-ticker--large" style="--c-ticker-animation-duration:150000ms;">
+              <div class="c-ticker__content flex flex-row flex-nowrap items-center">
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
+                <div class="c-ticker__item"><span>Starbucks</span></div>
+                <div class="c-ticker__item"><span>dean&amp;david</span></div>
+                <div class="c-ticker__item"><span>BackWerk</span></div>
+                <div class="c-ticker__item"><span>Aral</span></div>
+                <div class="c-ticker__item"><span>Nordsee</span></div>
+                <div class="c-ticker__item"><span>Die Lohners</span></div>
+                <div class="c-ticker__item"><span>BioMarkt Verbund</span></div>
+                <div class="c-ticker__item"><span>EDEKA</span></div>
+                <div class="c-ticker__item"><span>B&amp;B Hotels</span></div>
               </div>
             </div>
           </div>
+
+          <!-- CTA buttons -->
+          <div class="c-base-button-group c-base-button-group--center">
+            <div class="inner-block-button-group">
+              <button class="btn btn--primary-base btn--primary" type="button">
+                APP HERUNTERLADEN
+              </button>
+            </div>
+            <a href="https://store.toogoodtogo.com/onboarding" rel="noopener noreferrer" target="_blank"
+              title="UNTERNEHMEN REGISTRIEREN" class="inner-block-button-group">
+              <span class="btn btn--primary-base btn--primary">UNTERNEHMEN REGISTRIEREN</span>
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-    </div><!-- .c-layout -->
+  </div><!-- .c-layout -->
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="c-footer min-h-[64px] bg-primary" data-theme="dark">
-      <div class="c-footer__main c-footer__main--fullwidth bg-primary-30 desk:px-32"
-        style="background-image:url('./images/parallax-bg.png');background-size:cover;background-position:center;">
+  <!-- ========== FOOTER ========== -->
+  <footer class="c-footer min-h-[64px] bg-primary" data-theme="dark">
+    <div class="c-footer__main c-footer__main--fullwidth bg-primary-30" style="background-color: #024ab0;">
+      <div class="w-full" style="background-color: #107bd4;">
         <div class="wrapper flex flex-col py-32 gap-32 tablet-wide:flex-row justify-between text-white items-center">
 
           <!-- Footer Logo (left, hidden on mobile) -->
           <div class="logo-container hidden tablet-wide:flex">
             <a href="https://www.toogoodtogo.com/de">
-              <img width="80" height="64" loading="lazy" src="images/logo.svg" alt="U like it Logo">
+              <img width="80" height="64" loading="lazy" src="images/favicon-1.png" alt="U like it Logo">
             </a>
           </div>
 
@@ -907,14 +912,23 @@
           <!-- B-Corp Badge (right) -->
           <div class="logo-container flex justify-end">
             <a href="https://www.toogoodtogo.com/de/about-us/b-corp">
-              <img src="images/b-corp.svg" alt="B Corporation" width="80" height="80" loading="lazy">
+              <img src="images/bag.png" alt="B Corporation" width="80" height="80" loading="lazy">
             </a>
           </div>
 
         </div>
       </div>
-      <div class="c-footer__back w-full"></div>
-    </footer>
+      <!-- "U like it" Giant Footer Logo Text -->
+      <div class="w-full max-w-[1600px] mx-auto desk:py-32 flex justify-center items-center"
+        style="opacity: 0.3; padding-top: 4rem; padding-bottom: 4rem;">
+        <h1
+          style="font-family: 'Korolev', sans-serif; font-weight: 900; font-size: clamp(5rem, 18vw, 16rem); color: #F9F3F0; text-transform: uppercase; white-space: nowrap; line-height: 1;">
+          U like it U like it
+        </h1>
+      </div>
+    </div>
+    <div class="c-footer__back w-full"></div>
+  </footer>
 
   </div><!-- .sticky-footer -->
 

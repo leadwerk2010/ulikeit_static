@@ -358,6 +358,36 @@
     });
   }
 
+  /* =========================================================================
+     9. HERO TEXT CAROUSEL
+     ========================================================================= */
+  const heroTextElement = document.getElementById('hero-text-carousel');
+  if (heroTextElement) {
+    const phrases = [
+      "RETTE DEINE INNENSTADT DEAL FÜR DEAL",
+      "DEIN DEAL UM DIE ECKE SOFORT",
+      "DIE KÜCHE HAT NOCH WAS ÜBRIG SCHNAPP’S DIR"
+    ];
+    let phraseIndex = 0;
+
+    // Apply strict transition styles
+    heroTextElement.style.transition = 'opacity 0.5s ease-in-out';
+    heroTextElement.style.opacity = '1';
+
+    setInterval(() => {
+      // Fade out
+      heroTextElement.style.opacity = '0';
+
+      setTimeout(() => {
+        // Change text
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        heroTextElement.textContent = phrases[phraseIndex];
+        // Fade in
+        heroTextElement.style.opacity = '1';
+      }, 1000); // Wait for fade out to complete (0.5s)
+    }, 2750); // 2000ms visible + 500ms transition
+  }
+
   setTimeout(showCookieBanner, 500);
 
 })();
