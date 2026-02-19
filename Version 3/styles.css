@@ -51,9 +51,9 @@
   --shadow-elevated: 0 20px 60px rgba(0, 0, 0, 0.1);
 
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-blur: 16px;
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: 24px;
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 
   /* Gradients */
@@ -82,18 +82,37 @@
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Oberster Streifen in Hero-Farbe, damit am Bildschirmrand keine weiße Linie entsteht */
+  background: linear-gradient(to bottom, #e8f4fd 3px, var(--color-bg) 3px);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: var(--font-body);
   font-size: clamp(15px, 1.6vw, 17px);
   line-height: 1.7;
   color: var(--text-secondary);
-  background: var(--color-bg);
+  background: linear-gradient(to bottom, #e8f4fd 3px, var(--color-bg) 3px);
   overflow-x: hidden;
+}
+
+/* Deckstreifen am oberen Bildschirmrand – unter dem Header, füllt Lücke */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #e8f4fd;
+  z-index: 999;
+  pointer-events: none;
 }
 
 img {
@@ -283,9 +302,19 @@ h1, h2, h3, h4 {
   left: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  z-index: 1001;
+  z-index: 10001;
   width: 0%;
   transition: width 0.08s ease-out;
+  border: none;
+  overflow: hidden;
+  display: none;
+  /* Verhindert sichtbare Kante am oberen Rand */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.scroll-progress.is-scrolled {
+  display: block;
 }
 
 /* ---------- Scroll Reveal ---------- */
@@ -438,17 +467,66 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 /* ---------- Header / Navigation ---------- */
 .site-header {
   position: fixed;
-  top: 0;
+  top: -4px;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
+  padding: 17px 0 16px 0;
   transition: background var(--transition-base),
               backdrop-filter var(--transition-base),
               border-color var(--transition-base),
               box-shadow var(--transition-base),
               padding var(--transition-base);
   border-bottom: 1px solid transparent;
+  border-top: none;
+}
+
+/* Nav/Header oben: weiße Schrift für dunkles Hero-Bild */
+.site-header .nav-list a {
+  color: #fff;
+}
+.site-header .nav-list a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.site-header .nav-list a::after {
+  background: #fff;
+}
+.site-header .btn-ghost.btn-header {
+  color: #fff;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+.site-header .btn-ghost.btn-header:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
+}
+.site-header .nav-toggle-bar {
+  background: #fff;
+}
+
+/* Nach Scroll: normale Darstellung */
+.site-header.scrolled .nav-list a {
+  color: var(--text-secondary);
+}
+.site-header.scrolled .nav-list a:hover {
+  color: var(--color-primary);
+}
+.site-header.scrolled .nav-list a::after {
+  background: var(--color-primary);
+}
+.site-header.scrolled .btn-ghost.btn-header {
+  color: #fff;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+.site-header.scrolled .btn-ghost.btn-header:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
+}
+.site-header.scrolled .nav-toggle-bar {
+  background: var(--text-primary);
 }
 
 .site-header.scrolled {
@@ -559,22 +637,85 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 
+/* ---------- Hero + Warum: gemeinsamer ruhiger Hintergrund ---------- */
+.hero-why-bg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Parallax-Layer größer als Container, damit bei translateY keine Lücke am oberen Rand entsteht */
+.hero-bg-parallax {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 0;
+  background-image: url("images/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-frau-layer {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-frau-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform-origin: center center;
+  transition: transform 0.6s ease;
+}
+
+/* Hover über gesamten Hero-Bereich vergrößert die Frau (Content liegt darüber) */
+.hero-why-bg:hover .hero-frau-img {
+  transform: scale(1.08);
+}
+
+.hero-arrow-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-arrow-img {
+  display: block;
+  width: auto;
+  height: 24vh; /* 30% von Hero (80vh) */
+  object-fit: contain;
+  object-position: center bottom;
+}
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 60px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(16, 123, 212, 0.12) 0%, rgba(255, 255, 255, 1) 35%, rgba(255, 88, 1, 0.08) 70%, rgba(255, 255, 255, 1) 100%);
+  background: transparent;
 }
 
 .hero-bg-wrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .hero-blob-parallax {
@@ -588,6 +729,8 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
   transform-origin: center center;
 }
@@ -628,6 +771,122 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   animation: blobMove1 22s ease-in-out infinite reverse;
 }
 
+/* ---------- Gemeinsamer Hintergrund: Lösung, Ticker, Ablauf, Win-Win, Warum (ein durchgehender Parallax-Hintergrund) ---------- */
+.light-sections-wrap {
+  position: relative;
+  background: var(--color-bg-soft);
+}
+
+.light-sections-blob-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.light-blob-parallax {
+  position: absolute;
+  inset: 0;
+}
+
+.light-blob-parallax .light-blob {
+  position: absolute;
+}
+
+.light-blob {
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.light-blob-blue {
+  width:  min(600px, 45vw);
+  height: min(600px, 45vw);
+  background: var(--color-primary);
+  opacity: 0.24;
+  top: -8%;
+  left: -6%;
+  animation: blobMove1 24s ease-in-out infinite;
+}
+
+.light-blob-orange {
+  width:  min(550px, 42vw);
+  height: min(550px, 42vw);
+  background: var(--color-accent);
+  opacity: 0.2;
+  bottom: -6%;
+  right: -8%;
+  animation: blobMove2 20s ease-in-out infinite;
+}
+
+.light-blob-blue-2 {
+  width:  min(480px, 38vw);
+  height: min(480px, 38vw);
+  background: var(--color-primary);
+  opacity: 0.18;
+  top: 35%;
+  right: 5%;
+  animation: blobMove1 26s ease-in-out infinite reverse;
+}
+
+.light-blob-blue-3 {
+  width:  min(500px, 40vw);
+  height: min(500px, 40vw);
+  background: var(--color-primary);
+  opacity: 0.2;
+  top: 55%;
+  left: -5%;
+  animation: blobMove2 22s ease-in-out infinite;
+}
+
+.light-blob-orange-2 {
+  width:  min(420px, 35vw);
+  height: min(420px, 35vw);
+  background: var(--color-accent);
+  opacity: 0.18;
+  top: 15%;
+  right: 10%;
+  animation: blobMove1 28s ease-in-out infinite reverse;
+}
+
+.light-blob-orange-3 {
+  width:  min(460px, 36vw);
+  height: min(460px, 36vw);
+  background: var(--color-accent);
+  opacity: 0.16;
+  bottom: 25%;
+  left: 15%;
+  animation: blobMove2 24s ease-in-out infinite;
+}
+
+.light-blob-blue-4 {
+  width:  min(380px, 32vw);
+  height: min(380px, 32vw);
+  background: var(--color-primary);
+  opacity: 0.2;
+  top: 75%;
+  right: -4%;
+  animation: blobMove1 20s ease-in-out infinite;
+}
+
+.solution-section,
+.how-it-works-section,
+.winwin-section,
+.why-section {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.solution-section .container,
+.how-it-works-section .container,
+.winwin-section .container,
+.why-section .container,
+.pakete-section .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-inner {
   max-width: 1240px;
   width: 100%;
@@ -644,10 +903,24 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 .hero-title {
-  font-size: clamp(36px, 5.5vw, 64px);
+  font-size: clamp(48px, 8vw, 96px);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
+  color: #fff;
+}
+
+.hero .hero-title .text-gradient {
+  color: #fff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #fff;
+  background-clip: unset;
+  white-space: nowrap;
+}
+
+.hero-title-solid {
+  color: #fff;
 }
 
 .hero-subtitle {
@@ -662,6 +935,18 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.hero .hero-cta .btn-ghost {
+  color: #fff;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+.hero .hero-cta .btn-ghost:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
 }
 
 .hero-device-wrap {
@@ -766,16 +1051,16 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   pointer-events: none;
 }
 
-.problem-bg-image {
+.problem-bg-video {
   position: absolute;
-  top: -15%;
-  left: 0;
-  right: 0;
-  height: 130%;
-  background-image: url("images/shopping.jpg");
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }
 
 .problem-bg-gradient {
@@ -896,14 +1181,9 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 
 /* ---------- SOLUTION SECTION — Zwei Spalten: Intro links, Karten rechts (Screenshot) ---------- */
 .solution-section {
-  background: #f8f9fa;
+  background: transparent;
   position: relative;
 }
-.solution-section .container {
-  position: relative;
-  z-index: 1;
-}
-
 .solution-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -921,7 +1201,7 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 .solution-title {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 3.5vw, 40px);
+  font-size: clamp(28px, 4.5vw, 48px);
   font-weight: 800;
   line-height: 1.2;
   color: var(--text-primary);
@@ -1039,12 +1319,180 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 
+/* ---------- Lösung unter Bild (solution-2) — Blindtext orange (ohne Tag), Titel schwarz ---------- */
+.solution-2-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(14px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+#solution-2 .solution-title,
+.solution-title-black {
+  color: #000;
+}
+
+#solution-2 .container {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#solution-2 .solution-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+#solution-2 .solution-card {
+  width: 100%;
+}
+
+#solution-2 .solution-card:first-child,
+#solution-2 .solution-card:last-child {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  #solution-2 .solution-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.solution-2-text {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.solution-2-text p {
+  margin: 0 0 16px 0;
+}
+
+.solution-2-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- U like it Pakete — teilt sich Hintergrund mit So funktioniert die App ---------- */
+.pakete-section {
+  position: relative;
+  z-index: 1;
+}
+
+.pakete-container {
+  position: relative;
+  z-index: 1;
+}
+
+.pakete-layout {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  gap: clamp(48px, 7vw, 88px);
+  align-items: center;
+  min-height: 320px;
+}
+
+@media (max-width: 900px) {
+  .pakete-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .pakete-image {
+    order: -1;
+  }
+}
+
+.pakete-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pakete-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pakete-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pakete-label {
+  font-family: var(--font-heading);
+  font-size: clamp(14px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.pakete-title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.pakete-text {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.pakete-text p {
+  margin: 0 0 16px 0;
+}
+
+.pakete-text p:last-child {
+  margin-bottom: 0;
+}
+
+.pakete-cta {
+  align-self: flex-start;
+}
+
+
+/* ---------- Fixiertes Bild — volle Breite, 50vh, statisch ---------- */
+.parallax-image-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.parallax-image-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/Gruppe.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ---------- Ticker-Banner (Lösung → Ablauf) — Auto-Scroll, Orange ---------- */
 .ticker-banner {
   background: var(--color-accent);
   padding: 16px 0;
   overflow: hidden;
   white-space: nowrap;
+  border-top: none;
+  margin-top: 0;
 }
 
 .ticker-track {
@@ -1063,6 +1511,12 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   color: var(--text-inverse);
   padding: 0 2rem;
   flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.ticker-item:hover {
+  transform: scale(1.18);
 }
 
 .ticker-item::after {
@@ -1081,9 +1535,222 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 
+/* ---------- SO FUNKTIONIERT DIE APP + U like it Pakete — gemeinsamer Hintergrund ---------- */
+.app-pakete-wrap {
+  position: relative;
+  background: var(--color-bg-soft);
+  overflow: hidden;
+}
+
+.app-pakete-blob-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.app-pakete-wrap .app-pakete-blob-bg .light-blob {
+  opacity: 0.08;
+  animation: none;
+  filter: blur(120px);
+}
+
+.app-steps-section {
+  position: relative;
+  z-index: 1;
+  padding: clamp(48px, 8vw, 80px) 0;
+}
+
+.app-steps-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+}
+
+.app-steps-layout {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  gap: clamp(48px, 7vw, 88px);
+  align-items: center;
+  min-height: 400px;
+}
+
+@media (max-width: 900px) {
+  .app-steps-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .app-steps-images {
+    order: -1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.app-steps-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(14px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.app-steps-slider {
+  position: relative;
+}
+
+.app-steps-slides {
+  position: relative;
+  min-height: 200px;
+}
+
+.app-step-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.app-step-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.app-step-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.app-steps-section .app-step-text {
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 0 28px 0;
+}
+
+.app-steps-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-steps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.app-steps-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.app-steps-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.app-steps-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.app-steps-dot:hover {
+  background: var(--color-accent-light);
+}
+
+.app-steps-dot.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+.app-steps-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-steps-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 10px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  animation: app-step-float 5s ease-in-out infinite;
+}
+
+.app-step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes app-step-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.app-steps-badge {
+  position: absolute;
+  bottom: 10%;
+  left: 6%;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(16, 123, 212, 0.4);
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.app-steps-badge-icon {
+  color: #fff;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+}
+
+
 /* ---------- HOW IT WORKS (Tabs) — Light, offset layout ---------- */
 .how-it-works-section {
-  background: var(--color-bg-soft);
+  background: transparent;
 }
 /* Ablauf-Headline zentriert */
 .how-it-works-section .section-header {
@@ -1268,7 +1935,7 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 
 /* ---------- WIN-WIN SECTION — asymmetrisches Drei-Spalten ---------- */
 .winwin-section {
-  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 30%, var(--color-bg-soft) 70%, var(--color-bg) 100%);
+  background: transparent;
 }
 
 .winwin-grid {
@@ -1334,20 +2001,44 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 
 /* ---------- WHY U-LIKE-IT — Tasche Mitte, schwebende Glas-Boxen (wie Hero-Tags) ---------- */
 .why-section {
-  background: #f5f2ed;
-  border-bottom: 3px solid var(--color-primary-dark);
+  position: relative;
+  background: var(--color-bg-soft);
   padding-bottom: 0;
+  overflow: hidden;
+}
+
+.why-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 35%,
+    rgba(16, 123, 212, 0.08) 70%,
+    rgba(16, 123, 212, 0.18) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .why-header {
   margin-bottom: clamp(24px, 4vw, 36px);
 }
 
+.why-section .why-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
 .why-section .section-title {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000;
 }
 
 .why-content {
@@ -1404,10 +2095,10 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   margin: 0;
 }
 
-.why-float-1 { top: 8%;  left: 8%;  animation: whyFloat1 6s ease-in-out infinite; }
-.why-float-2 { top: 10%; right: 8%; animation: whyFloat2 5.5s ease-in-out infinite; }
-.why-float-3 { bottom: 20%; left: 5%;  animation: whyFloat3 6.5s ease-in-out infinite; }
-.why-float-4 { bottom: 18%; right: 6%; animation: whyFloat4 5s ease-in-out infinite; }
+.why-float-1 { top: 18%;  left: 2%;  animation: whyFloat1 6s ease-in-out infinite; }
+.why-float-2 { top: 13%;  right: 12%; animation: whyFloat2 5.5s ease-in-out infinite; }
+.why-float-3 { bottom: 34%; left: 10%;  animation: whyFloat3 6.5s ease-in-out infinite; }
+.why-float-4 { bottom: 24%; right: 8%; animation: whyFloat4 5s ease-in-out infinite; }
 
 @keyframes whyFloat1 {
   0%, 100% { transform: translate(0, 0); }
@@ -1456,6 +2147,12 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   vertical-align: bottom;
   will-change: transform;
   align-self: flex-end;
+  transition: transform 0.8s ease;
+  margin-top: 10px;
+}
+
+.why-bag-wrap:hover .why-bag-img {
+  transform: scale(1.08);
 }
 
 /* Why: Mobile — Karten unter der Tasche gestapelt */
@@ -1490,32 +2187,32 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 @media (min-width: 900px) {
-  .why-float-1 { left: 4%; }
-  .why-float-2 { right: 4%; }
-  .why-float-3 { left: 2%; }
-  .why-float-4 { right: 2%; }
+  .why-float-1 { left: 8%; }
+  .why-float-2 { right: 18%; }
+  .why-float-3 { left: 14%; }
+  .why-float-4 { right: 18%; }
 }
 
 
-/* ---------- VISION SECTION (Dark) ---------- */
+/* ---------- VISION SECTION (heller Orangeton) ---------- */
 .vision-section {
-  background: linear-gradient(180deg, var(--color-bg-dark-section) 0%, var(--color-bg-dark-section-alt) 50%, var(--color-bg-dark-section) 100%);
+  background: #ff8040;
   position: relative;
-  color: var(--text-inverse);
+  color: #fff;
 }
 
 .vision-section .section-title {
-  color: var(--text-inverse);
+  color: #fff;
   text-align: left;
 }
 
 .vision-section .badge {
-  color: var(--color-primary-light);
-  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .vision-section .text-gradient {
-  background: linear-gradient(135deg, #7dd3fc 0%, var(--color-accent-light) 100%);
+  background: linear-gradient(135deg, #fff 0%, #e8f4fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1544,7 +2241,7 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   margin-bottom: 16px;
   font-size: clamp(16px, 1.7vw, 18px);
   max-width: 520px;
-  color: rgba(255, 255, 255, 0.88);
+  color: #fff;
 }
 
 .vision-content .btn {
@@ -1555,10 +2252,10 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   position: relative;
   padding: clamp(32px, 5vw, 56px);
   border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--text-inverse);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .vision-blockquote p {
