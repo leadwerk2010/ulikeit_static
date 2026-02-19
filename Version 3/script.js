@@ -150,6 +150,7 @@
       var docHeight = document.documentElement.scrollHeight - window.innerHeight;
       var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       scrollProgress.style.width = progress + '%';
+      scrollProgress.classList.toggle('is-scrolled', scrollTop > 0);
     }
     window.addEventListener('scroll', function () {
       requestAnimationFrame(updateScrollProgress);
@@ -240,5 +241,59 @@
       }
     });
   });
+
+  /* ---------- So funktioniert die App — Slider + Bildwechsel ---------- */
+  var appStepsSection = document.getElementById('app-steps');
+  if (appStepsSection) {
+    var appSlides = appStepsSection.querySelectorAll('.app-step-slide');
+    var appDots = appStepsSection.querySelectorAll('.app-steps-dot');
+    var appPrev = document.getElementById('app-steps-prev');
+    var appNext = document.getElementById('app-steps-next');
+    var appImg1 = document.getElementById('app-step-img-1');
+    var appCurrentIndex = 0;
+    var appTotal = appSlides.length;
+
+    function setAppStep(index) {
+      appCurrentIndex = (index + appTotal) % appTotal;
+      appSlides.forEach(function (slide, i) {
+        slide.classList.toggle('active', i === appCurrentIndex);
+      });
+      appDots.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === appCurrentIndex);
+        dot.setAttribute('aria-selected', i === appCurrentIndex);
+      });
+      var activeSlide = appSlides[appCurrentIndex];
+      if (activeSlide && appImg1) {
+        var src = activeSlide.getAttribute('data-img-top');
+        if (src) appImg1.src = src;
+      }
+    }
+
+    if (appPrev) appPrev.addEventListener('click', function () { setAppStep(appCurrentIndex - 1); });
+    if (appNext) appNext.addEventListener('click', function () { setAppStep(appCurrentIndex + 1); });
+    appDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { setAppStep(i); });
+    });
+    setAppStep(0);
+
+    var appBadge = document.getElementById('app-steps-badge');
+    if (appBadge) {
+      var badgeParallaxStrength = 0.015;
+      function onAppStepsMouseMove(e) {
+        var rect = appStepsSection.getBoundingClientRect();
+        var centerX = rect.left + rect.width / 2;
+        var centerY = rect.top + rect.height / 2;
+        var deltaX = e.clientX - centerX;
+        var deltaY = e.clientY - centerY;
+        var moveX = -deltaX * badgeParallaxStrength;
+        var moveY = -deltaY * badgeParallaxStrength;
+        appBadge.style.transform = 'translate(' + Math.round(moveX) + 'px, ' + Math.round(moveY) + 'px)';
+      }
+      appStepsSection.addEventListener('mousemove', onAppStepsMouseMove);
+      appStepsSection.addEventListener('mouseleave', function () {
+        appBadge.style.transform = 'translate(0, 0)';
+      });
+    }
+  }
 
 })();
