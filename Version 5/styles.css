@@ -1426,6 +1426,13 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   #solution-2 .solution-cards {
     grid-template-columns: 1fr;
   }
+  .solution-card {
+    width: 100%;
+  }
+  .solution-card:first-child,
+  .solution-card:last-child {
+    margin: 0;
+  }
 }
 
 .solution-2-text {
@@ -1571,6 +1578,14 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   }
   .solution-faq-image-wrap {
     max-width: 280px;
+  }
+  .solution-faq-badge {
+    width: 60px;
+    height: 60px;
+  }
+  .solution-faq-badge-icon {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -1806,6 +1821,14 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
     order: -1;
     max-width: 280px;
     margin: 0 auto;
+  }
+  .app-steps-badge {
+    width: 80px;
+    height: 80px;
+  }
+  .app-steps-badge-icon {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -3024,6 +3047,22 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
 }
 
 
+/* Smaller desktops (1024–1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .nav-list {
+    gap: 18px;
+  }
+
+  .nav-list a {
+    font-size: 13px;
+  }
+
+  .header-cta .btn-header {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
 /* Mobile (< 1024px) */
 @media (max-width: 1023px) {
   .nav {
@@ -3091,13 +3130,34 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   .hero-floating-badges {
     display: none;
   }
+
+  .hero .hero-title .text-gradient {
+    white-space: normal;
+  }
+
+  .hero-title {
+    min-height: auto;
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .hero-arrow-img {
+    height: 25vh;
+  }
 }
 
 /* Small Mobile (< 480px) */
 @media (max-width: 479px) {
+  .hero-title {
+    font-size: clamp(28px, 10vw, 40px);
+  }
+
   .hero-cta {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
     justify-content: center;
   }
 
@@ -3113,6 +3173,32 @@ body.cursor-idle .custom-cursor-shadow { opacity: 0; }
   .cta-blocks {
     flex-direction: column;
     gap: 40px;
+  }
+
+  .cta-buttons-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons-row .btn {
+    width: 100%;
+  }
+
+  .pakete-title {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .solution-title {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 16px;
   }
 }
 
